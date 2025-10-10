@@ -18,7 +18,7 @@ const Project = ({
 }) =>
     <article className='grid xl:grid-cols-[.6fr_.4fr] gap-20 py-10'>
         <section className='flex flex-col justify-center gap-y-15'>
-            <header className='flex flex-col justify-center gap-y-10'>
+            <header className='flex flex-col justify-center gap-y-5'>
                 <h1 className='uppercase text-6xl/tight md:text-7xl/tight xl:text-8xl/tight'>{ title }</h1>
                 <ul className='uppercase flex flex-wrap gap-3 text-sm md:text-base xl:text-lg font-medium'>
                     {
@@ -31,12 +31,12 @@ const Project = ({
             </header>
             <section className='flex flex-col justify-center gap-y-5'>
                 <h3 className='capitalize text-2xl/loose md:text-3xl/loose xl:text-4xl/loose font-medium text-neutral-500 border-b-1 border-b-neutral-800'>Features</h3>
-                <ul className='flex flex-col gap-y-10 xl:gap-y-15 justify-center'>
+                <ul className='flex flex-col gap-y-5 xl:gap-y-10 justify-center'>
                     {
                         features.map(({ title, description }) =>
-                            <li key={ title + description } className='flex flex-col'>
-                                <span className='capitalize text-xl/loose md:text-2xl/loose xl:text-3xl'>{ title }</span>
-                                <span className='text-neutral-500 text-lg/loose md:text-xl/loose xl:text-2xl/loose'>{ description }</span>
+                            <li key={ title + description } className='flex flex-col text-lg/loose md:text-xl/loose xl:text-2xl/loose'>
+                                <span className='capitalize font-semibold'>{ title }</span>
+                                <span className='text-neutral-500'>{ description }</span>
                             </li>
                         )
                     }

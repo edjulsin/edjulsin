@@ -13,7 +13,7 @@ const Intro = () =>
     <section className='min-h-[150dvh] xl:min-h-[250dvh] flex flex-col justify-center'>
         <ul className='flex flex-col justify-center gap-y-20 md:gap-y-40 xl:gap-y-60'>
             <Item
-                title='frontend'
+                title='Frontend'
                 description={ info }
             />
             <Item

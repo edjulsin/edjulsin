@@ -27,7 +27,6 @@ const Layout = ({ children }: Readonly<{ children: React.ReactNode }>) =>
 				<Header />
 				<main>
 					{ children }
-					<Contact />
 				</main>
 				<Footer />
 			</div>
