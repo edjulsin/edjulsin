@@ -21,8 +21,9 @@ const Form = () => {
                 md:text-xl/relaxed
                 xl:text-2xl/relaxed
                 flex 
-                flex-col 
-                gap-y-15
+                flex-col
+                gap-y-10
+                md:gap-y-15
                 *:*:last:border-b-1 
                 *:*:last:border-b-neutral-800
                 *:*:p-2

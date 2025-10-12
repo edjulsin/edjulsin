@@ -1,36 +1,60 @@
-const info = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+import Intersector from './Intersector'
 
 const Item = ({ title, description }: { title: string, description: string }) =>
-    <li
-        className='flex flex-row-reverse gap-x-20 items-center group text-right'
-        data-intersected={ false }
-    >
-        <h5 className='uppercase text-4xl/tight md:text-6xl/tight xl:text-8xl/tight xl:basis-[55%]'>{ title }</h5>
-        <p className='sr-only xl:group-data-[intersected=true]:not-sr-only xl:basis-[30%] text-neutral-500 text-xl'>{ description }</p>
+    <li className='flex flex-row-reverse gap-x-35 items-center group intro-item'>
+        <h5 className='
+            uppercase 
+            text-4xl/tight 
+            md:text-6xl/tight 
+            xl:text-8xl/tight 
+            xl:basis-[55%]
+            curtain-horizontal
+            group-data-[intersecting=true]:curtain-horizontal-open
+            group-data-[intersecting=false]:group-data-[position=-1]:curtain-horizontal-open
+            group-data-[intersecting=false]:group-data-[position=1]:curtain-horizontal-close
+            text-right
+        '
+        >
+            { title }
+        </h5>
+        <p className='
+            sr-only 
+            xl:not-sr-only 
+            xl:group-data-[intersecting=true]:slide-from-bottom
+            xl:group-data-[intersecting=false]:fade-out
+            xl:basis-[30%] 
+            text-neutral-500 
+            text-3xl/normal
+        '
+        >
+            { description }
+        </p>
     </li>
 
+
 const Intro = () =>
-    <section className='min-h-[150dvh] xl:min-h-[250dvh] flex flex-col justify-center'>
-        <ul className='flex flex-col justify-center gap-y-20 md:gap-y-40 xl:gap-y-60'>
+    <section className='min-h-[150dvh] xl:min-h-[300dvh] flex flex-col justify-center'>
+        <ul className='grid auto-rows-fr gap-y-20 md:gap-y-40 xl:gap-y-60'>
+            <Intersector selectors={ [ '.intro-item' ] } options={ { rootMargin: '0% 0% -50% 0%', threshold: .5 } } />
             <Item
                 title='Frontend'
-                description={ info }
+                description='So many frameworks and docs, i keep my faith on the fundamental principle.'
             />
             <Item
                 title='Responsive design'
-                description={ info }
+                description='Basic but, this is what differentiate a professional & an amateur.'
             />
             <Item
                 title='Animation & interactivity'
-                description={ info }
+                description='Everyone would love it, as long as it`s done correctly.'
             />
             <Item
                 title='Accessible & SEO'
-                description={ info }
+                description='If it`s easy to use & easy to be found, money will follow.'
             />
             <Item
                 title='Readable & testable'
-                description={ info }
+                description='Maintainable code is actually come from taste.'
             />
         </ul>
     </section>
