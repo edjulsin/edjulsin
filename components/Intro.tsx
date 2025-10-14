@@ -35,7 +35,7 @@ const Item = ({ title, description }: { title: string, description: string }) =>
 const Intro = () =>
     <section className='min-h-[150dvh] xl:min-h-[300dvh] flex flex-col justify-center'>
         <ul className='grid auto-rows-fr gap-y-20 md:gap-y-40 xl:gap-y-60'>
-            <Intersector selectors={ [ '.intro-item' ] } options={ { rootMargin: '0% 0% -50% 0%', threshold: .5 } } />
+            <Intersector selectors={ [ '.intro-item' ] } options={ { rootMargin: '0% 0% -30% 0%', threshold: 1 } } />
             <Item
                 title='Frontend'
                 description='So many frameworks and docs, i keep my faith on the fundamental principle.'

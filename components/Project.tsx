@@ -1,5 +1,6 @@
 import Image, { StaticImageData } from 'next/image'
 import Link from 'next/link'
+import Intersector from './Intersector'
 
 const Project = ({
     title,
@@ -16,9 +17,9 @@ const Project = ({
     images: { width: number, height: number, data: StaticImageData }[],
     demo: string
 }) =>
-    <article className='grid xl:grid-cols-[.6fr_.4fr] gap-20 py-10'>
+    <article className='grid xl:grid-cols-[.6fr_.4fr] gap-30 py-10'>
         <section className='flex flex-col justify-center gap-y-15'>
-            <header className='flex flex-col justify-center gap-y-5'>
+            <header className='flex flex-col justify-center gap-y-10'>
                 <h1 className='uppercase text-6xl/tight md:text-7xl/tight xl:text-8xl/tight'>{ title }</h1>
                 <ul className='uppercase flex flex-wrap gap-3 text-sm md:text-base xl:text-lg font-medium'>
                     {
@@ -47,7 +48,7 @@ const Project = ({
                     href={ demo }
                     target='_blank'
                     rel='noopener noreferrer'
-                    className='uppercase text-lg md:text-xl xl:text-2xl flex items-center justify-center gap-x-2 px-1 py-2 rounded-full outline-1 outline-neutral-500'
+                    className='uppercase text-lg md:text-xl xl:text-2xl flex items-center justify-center gap-x-2 px-1 py-2 rounded-full outline-1 outline-neutral-500 hover:bg-foreground hover:text-background transition-colors'
                 >
                     <span>Live demo</span>
                     <span>&#8599;</span>
@@ -55,10 +56,11 @@ const Project = ({
             </section>
         </section>
         <section>
+            <Intersector selectors={ [ '.project-image' ] } />
             <ul className='flex flex-col gap-y-5 sticky top-0 right-0'>
                 {
                     images.map((v, i) =>
-                        <li key={ v.data.src }>
+                        <li className='project-image data-[intersected=true]:unfold-xy' key={ v.data.src }>
                             <Image
                                 className='size-full'
                                 src={ v.data }
