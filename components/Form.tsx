@@ -1,14 +1,16 @@
 'use client'
 
-import { send } from '@/action/server'
 import NextForm from 'next/form'
+import { send } from '@/action/server'
 import { useActionState } from 'react'
-import FormType from '@/type/form'
+import { FormState } from '@/type/form'
 
-const contact = (state: FormType, form: FormData) =>
+const defaultState = { sent: false, name: '', email: '', message: '', server: '' }
+
+const contact = (state: FormState, form: FormData) =>
     send(form).then(
-        v => ({ ...state, ...v }),
-        v => ({ ...state, ...v })
+        () => ({ ...defaultState, sent: true }),
+        v => ({ ...defaultState, ...v, sent: false })
     )
 
 const Field = ({ id, children }: { id: string, children: React.ReactNode }) =>
@@ -19,18 +21,22 @@ const Field = ({ id, children }: { id: string, children: React.ReactNode }) =>
         { children }
     </fieldset>
 
-const Error = ({ message }: { message: string }) => <small className='text-red-500'>* { message }</small>
-const Success = ({ message }: { message: string }) => <small className='text-green-500 text-center'>* { message }</small>
-const Server = ({ message }: { message: string }) => <small className='text-red-500 text-center'>* { message }</small>
+const Error = ({ message }: { message: string }) =>
+    <small className='text-red-500'>* { message }</small>
+
+const Success = ({ message }: { message: string }) =>
+    <small className='text-green-500 text-center'>* { message }</small>
+
+const Other = ({ message }: { message: string }) =>
+    <small className='text-red-500 text-center'>* { message }</small>
 
 const Form = () => {
-    const [ state, action, pending ] = useActionState<FormType, FormData>(contact, {
-        token: '',
+    const [ state, action, pending ] = useActionState<FormState, FormData>(contact, {
         sent: false,
-        name: { error: false, value: 'Name is wrong' },
-        email: { error: false, value: 'Email is wrong' },
-        message: { error: false, value: 'Message is wrong' },
-        server: { error: false, value: 'Server is wrong' }
+        name: '',
+        email: '',
+        message: '',
+        other: ''
     })
 
     return (
@@ -59,7 +65,7 @@ const Form = () => {
                     maxLength={ 50 }
                     required
                 />
-                { state.name.error ? <Error message={ state.name.value } /> : null }
+                { state.name ? <Error message={ state.name } /> : null }
             </Field>
             <Field id='email'>
                 <input
@@ -70,7 +76,7 @@ const Form = () => {
                     name='email'
                     required
                 />
-                { state.email.error ? <Error message={ state.email.value } /> : null }
+                { state.email ? <Error message={ state.email } /> : null }
             </Field>
             <Field id='message'>
                 <textarea
@@ -82,7 +88,7 @@ const Form = () => {
                     maxLength={ 1000 }
                     required
                 />
-                { state.message.error ? <Error message={ state.message.value } /> : null }
+                { state.message ? <Error message={ state.message } /> : null }
                 <style jsx>
                     { `#message { scrollbar-width: thin; }` }
                 </style>
@@ -96,8 +102,8 @@ const Form = () => {
             {
                 state.sent
                     ? <Success message='Your message has been sent' />
-                    : state.server.error
-                        ? <Server message='Server error. Please retry' />
+                    : state.other
+                        ? <Other message={ state.other } />
                         : null
             }
         </NextForm>

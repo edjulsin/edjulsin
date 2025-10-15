@@ -1,13 +1,14 @@
 
-type Field = { error: boolean, value: string }
-
-type Form = {
+export type FormState = {
     sent: boolean,
-    token: string,
-    name: Field,
-    email: Field,
-    message: Field,
-    server: Field
+    name: string,
+    email: string,
+    message: string,
+    other: string
 }
 
-export default Form
+export type Form = {
+    name: string,
+    email: string,
+    message: string,
+}
