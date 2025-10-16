@@ -25,7 +25,7 @@ const Contact = ({ name, email, message }: { name: string, email: string, messag
         <Head />
         <Preview>Contact from { domain }</Preview>
         <Tailwind>
-            <Body className="mx-auto my-auto bg-white px-2 font-sans">
+            <Body className="mx-auto my-auto bg-white font-sans">
                 <Container className="mx-auto my-[40px] max-w-[465px] rounded border border-[#eaeaea] border-solid p-[30px]">
                     <Section>
                         <Img
@@ -39,8 +39,8 @@ const Contact = ({ name, email, message }: { name: string, email: string, messag
                     <Heading className="mx-0 my-[20px] p-0 text-center font-normal text-[22px] text-neutral-800">
                         Contact from <strong>{ domain }</strong>
                     </Heading>
-                    <Section className="text-neutral-500 leading-[24px]">
-                        <Row className='my-[20px]'>
+                    <Section className="text-neutral-500 my-[30px]">
+                        <Row className='mb-[20px]'>
                             <Column>
                                 <Text className='m-0 p-0 text-[12px] mb-[5px] text-neutral-400'>Name</Text>
                                 <Text className='capitalize m-0 p-0 text-[14px]'>{ name }</Text>
@@ -52,14 +52,13 @@ const Contact = ({ name, email, message }: { name: string, email: string, messag
                                 <Link className='m-0 p-0 underline text-[14px] leading-[24px]' href={ `mailto:${email}` }>{ email }</Link>
                             </Column>
                         </Row>
-                        <Row className='my-[20px]'>
+                        <Row className='mt-[20px]'>
                             <Column>
                                 <Text className='m-0 p-0 text-[12px] mb-[5px] text-neutral-400'>Message</Text>
                                 <Text className='m-0 p-0 text-[14px]'>{ message }</Text>
                             </Column>
                         </Row>
                     </Section>
-                    <br />
                     <Hr className="mx-0 my-[5px] w-full border border-[#eaeaea] border-solid" />
                     <Text className="text-neutral-400 text-[12px] leading-[24px]">
                         This is an automated message. Please reply directly to the sender's email.
