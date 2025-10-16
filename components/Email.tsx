@@ -26,24 +26,19 @@ const Contact = ({ name, email, message }: { name: string, email: string, messag
         <Preview>Contact from { domain }</Preview>
         <Tailwind>
             <Body className="mx-auto my-auto bg-white px-2 font-sans">
-                <Container className="mx-auto my-[40px] max-w-[465px] rounded border border-[#eaeaea] border-solid p-[20px]">
-                    <Section className="mt-[32px]">
-                        <Link href={ url } className='m-0 p-0'>
-                            <Img
-                                className="mx-auto m-0 w-[250px] h-auto"
-                                src={ banner }
-                                width="1200"
-                                height="630"
-                                alt={ domain }
-                            />
-                        </Link>
+                <Container className="mx-auto my-[40px] max-w-[465px] rounded border border-[#eaeaea] border-solid p-[30px]">
+                    <Section>
+                        <Img
+                            className="mx-auto my-0 w-[250px] h-auto"
+                            src={ banner }
+                            width="1200"
+                            height="630"
+                            alt={ domain }
+                        />
                     </Section>
-                    <Heading className="mx-0 mt-[15px] mb-[30px] p-0 text-center font-normal text-[24px] text-neutral-800">
+                    <Heading className="mx-0 my-[20px] p-0 text-center font-normal text-[22px] text-neutral-800">
                         Contact from <strong>{ domain }</strong>
                     </Heading>
-                    <Text className="text-[14px] text-neutral-500 leading-[24px]">
-                        You've received a message through <strong>{ domain }'s</strong> contact form.
-                    </Text>
                     <Section className="text-neutral-500 leading-[24px]">
                         <Row className='my-[20px]'>
                             <Column>
@@ -64,7 +59,6 @@ const Contact = ({ name, email, message }: { name: string, email: string, messag
                             </Column>
                         </Row>
                     </Section>
-                    <br />
                     <br />
                     <Hr className="mx-0 my-[5px] w-full border border-[#eaeaea] border-solid" />
                     <Text className="text-neutral-400 text-[12px] leading-[24px]">

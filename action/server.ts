@@ -25,11 +25,20 @@ export const send = async (form: FormData): Promise<Partial<Form>> => {
         name: isLength(value.name, { min: 2, max: 50 }),
         email: isEmail(value.email),
         message: isLength(value.message, { min: 10, max: 1000 })
-    }).filter(([ _, v ]) => v)
+    }).filter(([ _, v ]) => !v).map(([ k ]) => k)
 
     if(error.length > 0) {
+        const message = {
+            name: 'Name must be between 2 to 50 characters.',
+            email: 'Email format must be correct.',
+            message: 'Message must be between 10 to 1000 chararcters.'
+        }
         return Promise.reject(
-            Object.fromEntries(error)
+            Object.fromEntries(
+                Object.entries(message).filter(([ k ]) =>
+                    error.includes(k)
+                )
+            )
         )
     } else {
         return render(
@@ -49,7 +58,7 @@ export const send = async (form: FormData): Promise<Partial<Form>> => {
                         .update(`${value.name}${value.email}${value.message}`)
                         .digest('hex')
                 }).then(
-                    () => Promise.resolve(value),
+                    () => Promise.resolve({}),
                     () => Promise.reject({ other: 'Something wrong' })
                 )
             },
