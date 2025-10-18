@@ -14,10 +14,10 @@ const Project = ({
     stack: string[],
     description: string,
     features: { title: string, description: string }[],
-    images: { width: number, height: number, data: StaticImageData }[],
+    images: { width: number, height: number, data: StaticImageData, alt: string }[],
     demo: string
 }) =>
-    <article className='grid xl:grid-cols-[.6fr_.4fr] gap-30 py-10'>
+    <article className='grid xl:grid-cols-[.6fr_.4fr] gap-35 py-10'>
         <section className='flex flex-col justify-center gap-y-15'>
             <header className='flex flex-col justify-center gap-y-10'>
                 <h1 className='uppercase text-6xl/tight md:text-7xl/tight xl:text-8xl/tight'>{ title }</h1>
@@ -57,14 +57,14 @@ const Project = ({
         </section>
         <section>
             <Intersector selectors={ [ '.project-image' ] } />
-            <ul className='flex flex-col gap-y-5 sticky top-0 right-0'>
+            <ul className='flex flex-col gap-y-10 sticky top-0 right-0'>
                 {
                     images.map((v, i) =>
                         <li className='project-image data-[intersected=true]:unfold-xy' key={ v.data.src }>
                             <Image
                                 className='size-full'
                                 src={ v.data }
-                                alt={ `No.${i + 1} preview of ${title}` }
+                                alt={ v.alt }
                                 width={ v.width }
                                 height={ v.height }
                             />

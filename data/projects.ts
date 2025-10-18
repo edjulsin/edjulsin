@@ -6,7 +6,7 @@ import krypton2 from '@/assets/krypton/2.png'
 const projects = [
     {
         slug: 'katt',
-        title: 'katt',
+        title: 'Katt',
         description: 'Katt is an easy-to-use blog CMS for gallery-style blogs with heavy use of images.\nSuitable for architecture or interior design website.',
         stack: [ 'next', 'typescript', 'tailwind', 'supabase', 'resend' ],
         features: [
@@ -17,8 +17,8 @@ const projects = [
             { title: 'SEO', description: 'Make your blog search engine friendly.' }
         ],
         images: [
-            { width: 1294, height: 1007, data: katt1 },
-            { width: 1350, height: 1371, data: katt2 }
+            { width: 1294, height: 1007, data: katt1, alt: 'Katt`s home page' },
+            { width: 1350, height: 1371, data: katt2, alt: 'Katt`s editor page' }
         ],
         demo: 'https://kattinterior.vercel.app/'
     },
@@ -35,8 +35,8 @@ const projects = [
             { title: 'Customizable', description: 'Make your own chart.' }
         ],
         images: [
-            { width: 867, height: 629, data: krypton1 },
-            { width: 852, height: 407, data: krypton2 },
+            { width: 867, height: 629, data: krypton1, alt: 'Krypton`s primary chart' },
+            { width: 852, height: 407, data: krypton2, alt: 'Krypton`s secondary chart' }
         ],
         demo: 'https://krypton-navy.vercel.app/'
     }

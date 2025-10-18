@@ -32,10 +32,10 @@ const Work = () =>
                         <div className='h-px bg-neutral-800 transition-transform scale-x-0 origin-left ease-in-out duration-800 group-data-[intersected=true]:scale-x-100' />
                         <li key={ v.slug }>
                             <Link
-                                className='py-5 md:py-10 xl:py-15 text-neutral-500 hover:text-foreground cursor-pointer transition-colors block hover:*:translate-x-1 md:hover:*:translate-x-2 xl:hover:*:translate-x-3'
+                                className='py-5 md:py-10 xl:py-15 text-neutral-500 hover:text-foreground cursor-pointer transition-colors block'
                                 href={ `projects/${v.slug}` }
                             >
-                                <span className='inline-block transition-transform duration-300'>{ v.title }</span>
+                                { v.title }
                             </Link>
                         </li>
                     </React.Fragment>
