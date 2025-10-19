@@ -22,8 +22,8 @@ const schema = ({
 		'@type': 'Person',
 		name: name,
 		url: url,
-		jobTitle: 'Frontend Developer',
-	},
+		jobTitle: 'Frontend Developer'
+	}
 })
 
 export default schema

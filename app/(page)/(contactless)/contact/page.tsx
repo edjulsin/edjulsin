@@ -4,11 +4,10 @@ import schema from '@/schemas/contact'
 
 export const metadata = {
 	title: 'Contact',
-	description:
-		'Get in touch with Edwin Julian, a frontend developer based in Indonesia. Reach out for collaborations, projects, or inquiries.',
+	description: 'Get in touch with Edwin Julian, a frontend developer based in Indonesia. Reach out for collaborations, projects, or inquiries.',
 	alternates: {
-		canonical: '/contact',
-	},
+		canonical: '/contact'
+	}
 }
 
 const Page = () => (

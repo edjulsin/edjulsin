@@ -22,7 +22,7 @@ const Project = ({
 	}[]
 	demo: string
 }) => (
-	<article className='grid xl:grid-cols-[.6fr_.4fr] gap-35 py-10'>
+	<article className='grid xl:grid-cols-[.6fr_.4fr] gap-30 py-10'>
 		<section className='flex flex-col justify-center gap-y-15'>
 			<header className='flex flex-col justify-center gap-y-10'>
 				<h1 className='uppercase text-6xl/tight md:text-7xl/tight xl:text-8xl/tight'>

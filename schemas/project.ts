@@ -19,10 +19,10 @@ const schema = (project: Project): WithContext<CreativeWork> => {
 		creator: {
 			'@type': 'Person',
 			name: name,
-			url: url,
+			url: url
 		},
 		image: url + thumbnail.data.src,
-		keywords: project.stack.map(capitalize),
+		keywords: project.stack.map(capitalize)
 	}
 }
 

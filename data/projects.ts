@@ -33,10 +33,10 @@ const projects = [
 			},
 		],
 		images: [
-			{ width: 1294, height: 1007, data: katt1, alt: 'Katt`s home page' },
+			{ width: katt1.width, height: katt1.height, data: katt1, alt: 'Katt`s home page' },
 			{
-				width: 1350,
-				height: 1371,
+				width: katt2.width,
+				height: katt2.height,
 				data: katt2,
 				alt: 'Katt`s editor page',
 			},
@@ -70,14 +70,14 @@ const projects = [
 		],
 		images: [
 			{
-				width: 867,
-				height: 629,
+				width: krypton1.width,
+				height: krypton1.height,
 				data: krypton1,
 				alt: 'Krypton`s primary chart',
 			},
 			{
-				width: 852,
-				height: 407,
+				width: krypton2.width,
+				height: krypton2.height,
 				data: krypton2,
 				alt: 'Krypton`s secondary chart',
 			},

@@ -33,8 +33,8 @@ const schema = ({
 		'next',
 		'javascript',
 		'web development',
-		'frontend engineering',
-	].map(capitalize),
+		'frontend engineering'
+	].map(capitalize)
 })
 
 export default schema

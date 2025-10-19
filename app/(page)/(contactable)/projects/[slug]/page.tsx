@@ -8,10 +8,6 @@ import projects from '@/data/projects'
 import schema from '@/schemas/project'
 import capitalize from '@/utility/capitalize'
 
-const development = process.env.NODE_ENV === 'development'
-const url = development
-	? 'http://localhost:3000'
-	: process.env.NEXT_PUBLIC_SITE_URL
 const name = process.env.NEXT_PUBLIC_SITE_NAME
 
 const slugs = projects.map(v => v.slug)
@@ -26,7 +22,7 @@ export const generateMetadata = async ({
 			const slug = sanitize(v.slug + '')
 				.trim()
 				.toLowerCase()
-			if (isSlug(slug) && slugs.includes(slug)) {
+			if(isSlug(slug) && slugs.includes(slug)) {
 				const project = projects.find(v => v.slug === slug)!
 				const path = `/projects/${v.slug}`
 				return {
@@ -38,8 +34,8 @@ export const generateMetadata = async ({
 						siteName: name,
 						title: capitalize(project.title),
 						description: project.description,
-						url: url + path,
-					},
+						url: path
+					}
 				}
 			} else {
 				return {}
@@ -53,7 +49,7 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) =>
 		const slug = sanitize(v.slug + '')
 			.trim()
 			.toLowerCase()
-		if (isSlug(slug) && slugs.includes(slug)) {
+		if(isSlug(slug) && slugs.includes(slug)) {
 			const project = projects.find(v => v.slug === slug)!
 			return (
 				<>
