@@ -218,7 +218,11 @@ body {
 @utility curtain-horizontal {
 	background-size: 200% 100%;
 	background-clip: text;
-	background-image: linear-gradient(to right, var(--foreground) 50%, var(--color-neutral-500) 50%);
+	background-image: linear-gradient(
+		to right,
+		var(--foreground) 50%,
+		var(--color-neutral-500) 50%
+	);
 	color: transparent;
 }
 
@@ -251,13 +255,13 @@ body {
 }
 
 @utility scale-up {
-	&>* {
+	& > * {
 		@apply animate-[scale-up_500ms_ease-in-out_both];
 	}
 }
 
 @utility scale-down {
-	&>* {
+	& > * {
 		@apply animate-[scale-down_500ms_ease-in-out_both];
 	}
 }
@@ -327,7 +331,7 @@ body {
 }
 
 @utility anim-delay-* {
-	animation-delay: --value([*]);
+	animation-delay: --value([*]); 
 }
 
 @utility anim-state-* {

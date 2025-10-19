@@ -5,23 +5,25 @@ import Work from '@/components/Work'
 import schema from '@/schemas/home'
 
 export const metadata = {
-	description: 'Edwin Julian is a frontend developer based in Indonesia, creating modern, responsive, and user-friendly web experiences using React and Next.js.',
+	description:
+		'Edwin Julian is a frontend developer based in Indonesia, creating modern, responsive, and user-friendly web experiences using React and Next.js.',
 	alternates: {
-		canonical: '/'
-	}
+		canonical: '/',
+	},
 }
 
-const Home = () =>
+const Home = () => (
 	<>
 		<Schema
-			value={ schema({
+			value={schema({
 				path: metadata.alternates.canonical,
-				description: metadata.description
-			}) }
+				description: metadata.description,
+			})}
 		/>
 		<Hero />
 		<Intro />
 		<Work />
 	</>
+)
 
 export default Home

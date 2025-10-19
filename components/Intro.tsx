@@ -1,8 +1,15 @@
 import Intersector from './Intersector'
 
-const Item = ({ title, description }: { title: string, description: string }) =>
-    <li className='flex flex-row-reverse gap-x-35 items-center group intro-item'>
-        <h5 className='
+const Item = ({
+	title,
+	description,
+}: {
+	title: string
+	description: string
+}) => (
+	<li className='flex flex-row-reverse gap-x-35 items-center group intro-item'>
+		<h5
+			className='
             uppercase 
             text-4xl/tight 
             md:text-6xl/tight 
@@ -14,10 +21,11 @@ const Item = ({ title, description }: { title: string, description: string }) =>
             group-data-[intersecting=false]:group-data-[position=1]:curtain-horizontal-close
             text-right
         '
-        >
-            { title }
-        </h5>
-        <p className='
+		>
+			{title}
+		</h5>
+		<p
+			className='
             sr-only 
             xl:not-sr-only 
             xl:group-data-[intersecting=true]:slide-from-bottom
@@ -26,37 +34,41 @@ const Item = ({ title, description }: { title: string, description: string }) =>
             text-neutral-500 
             text-3xl/normal
         '
-        >
-            { description }
-        </p>
-    </li>
+		>
+			{description}
+		</p>
+	</li>
+)
 
-
-const Intro = () =>
-    <section className='min-h-[150dvh] xl:min-h-[300dvh] flex flex-col justify-center'>
-        <ul className='grid auto-rows-fr gap-y-20 md:gap-y-40 xl:gap-y-60'>
-            <Intersector selectors={ [ '.intro-item' ] } options={ { rootMargin: '0% 0% -30% 0%', threshold: 1 } } />
-            <Item
-                title='Frontend'
-                description='So many frameworks and docs, i keep my faith on the fundamental principle.'
-            />
-            <Item
-                title='Responsive design'
-                description='Basic but, this is what differentiate a professional & an amateur.'
-            />
-            <Item
-                title='Animation & interactivity'
-                description='Everyone would love it, as long as it`s done correctly.'
-            />
-            <Item
-                title='Accessible & SEO'
-                description='If it`s easy to use & easy to be found, money will follow.'
-            />
-            <Item
-                title='Readable & testable'
-                description='Maintainable code is actually come from taste.'
-            />
-        </ul>
-    </section>
+const Intro = () => (
+	<section className='min-h-[150dvh] xl:min-h-[300dvh] flex flex-col justify-center'>
+		<ul className='grid auto-rows-fr gap-y-20 md:gap-y-40 xl:gap-y-60'>
+			<Intersector
+				selectors={['.intro-item']}
+				options={{ rootMargin: '0% 0% -30% 0%', threshold: 1 }}
+			/>
+			<Item
+				title='Frontend'
+				description='So many frameworks and docs, i keep my faith on the fundamental principle.'
+			/>
+			<Item
+				title='Responsive design'
+				description='Basic but, this is what differentiate a professional & an amateur.'
+			/>
+			<Item
+				title='Animation & interactivity'
+				description='Everyone would love it, as long as it`s done correctly.'
+			/>
+			<Item
+				title='Accessible & SEO'
+				description='If it`s easy to use & easy to be found, money will follow.'
+			/>
+			<Item
+				title='Readable & testable'
+				description='Maintainable code is actually come from taste.'
+			/>
+		</ul>
+	</section>
+)
 
 export default Intro
