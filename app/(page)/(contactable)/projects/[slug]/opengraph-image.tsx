@@ -22,7 +22,7 @@ export const generateImageMetadata = async ({
 	const slug = sanitize(params.slug + '')
 		.trim()
 		.toLowerCase()
-	if (isSlug(slug) && slugs.includes(slug)) {
+	if(isSlug(slug) && slugs.includes(slug)) {
 		const project = projects.find(v => v.slug === slug)!
 		return project.images.slice(0, 1).map((v, i) => {
 			return {
@@ -47,13 +47,13 @@ const Image = async ({
 	const slug = sanitize(params.slug + '')
 		.trim()
 		.toLowerCase()
-	if (isSlug(slug) && slugs.includes(slug)) {
+	if(isSlug(slug) && slugs.includes(slug)) {
 		const project = projects.find(v => v.slug === slug)!
 		const thumbnail = project.images[id]
 		return readFile(
 			join(
 				process.cwd(),
-				`/assets/${project.title.toLowerCase()}/${id}.png`,
+				`/assets/${project.slug.toLowerCase()}/${id}.png`,
 			),
 			'base64',
 		).then(
