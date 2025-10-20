@@ -49,19 +49,19 @@ const Intro = () => (
 			/>
 			<Item
 				title='Frontend'
-				description='So many frameworks and docs, i keep my faith on the fundamental principle.'
+				description='So many frameworks and docs, keep your faith on the fundamental principle.'
 			/>
 			<Item
 				title='Responsive design'
-				description='Basic but, this is what differentiate a professional & an amateur.'
+				description='Basic but, it differentiate a professional with an amateur.'
 			/>
 			<Item
 				title='Animation & interactivity'
-				description='Everyone would love it, as long as it`s done correctly.'
+				description='Everyone would love it, if it`s done correctly.'
 			/>
 			<Item
 				title='Accessible & SEO'
-				description='If it`s easy to use & easy to be found, money will follow.'
+				description='Easy to use & easy to be found, money will follow.'
 			/>
 			<Item
 				title='Readable & testable'

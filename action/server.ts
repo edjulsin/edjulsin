@@ -19,7 +19,7 @@ export const send = async (form: FormData): Promise<Partial<Form>> => {
 	const value = {
 		name: field('name', form),
 		email: field('email', form),
-		message: field('message', form),
+		message: field('message', form)
 	}
 	const error = Object.entries({
 		name: isLength(value.name, { min: 2, max: 50 }),
@@ -29,16 +29,16 @@ export const send = async (form: FormData): Promise<Partial<Form>> => {
 		.filter(([_, v]) => !v)
 		.map(([k]) => k)
 
-	if (error.length > 0) {
+	if(error.length > 0) {
 		const message = {
 			name: 'Name must be between 2 to 50 characters.',
 			email: 'Email format must be correct.',
-			message: 'Message must be between 10 to 1000 chararcters.',
+			message: 'Message must be between 10 to 1000 chararcters.'
 		}
 		return Promise.reject(
 			Object.fromEntries(
-				Object.entries(message).filter(([k]) => error.includes(k)),
-			),
+				Object.entries(message).filter(([k]) => error.includes(k))
+			)
 		)
 	} else {
 		return render(Email(value)).then(
@@ -56,15 +56,13 @@ export const send = async (form: FormData): Promise<Partial<Form>> => {
 						{
 							idempotencyKey: crypto
 								.createHash('sha256')
-								.update(
-									`${value.name}${value.email}${value.message}`,
-								)
-								.digest('hex'),
+								.update(`${value.name}${value.email}${value.message}`)
+								.digest('hex')
 						},
 					)
 					.then(
 						() => Promise.resolve({}),
-						() => Promise.reject({ other: 'Something wrong' }),
+						() => Promise.reject({ other: 'Something wrong' })
 					)
 			},
 			() => Promise.reject({ other: 'Something wrong' }),
