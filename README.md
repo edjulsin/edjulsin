@@ -8,7 +8,6 @@ I love crafting beautiful, fast, and accessible web experiences with modern web 
 ## 🚀 About the Project
 
 This is my **personal portfolio website**, built to showcase my projects, experience, and design approach.  
-It’s designed with a focus on **clean UI**, **smooth performance**, and **SEO optimization**.
 
 ### 🧰 Tech Stack
 - **Next.js** — App Router, Metadata API, and Image Optimization  
