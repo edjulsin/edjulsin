@@ -7,7 +7,7 @@ const projects = [
 	{
 		slug: 'katt',
 		title: 'Katt',
-		description: 'Katt is an easy-to-use blog CMS for gallery-style blogs with heavy image use.\nIt’s suitable for architecture or interior design websites.',
+		description: 'Katt is an easy-to-use blog CMS for gallery-style blogs with heavy image use. It’s suitable for architecture or interior design websites.',
 		stack: ['next', 'typescript', 'tailwind', 'supabase', 'resend'],
 		features: [
 			{
