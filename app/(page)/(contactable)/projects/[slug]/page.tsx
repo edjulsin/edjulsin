@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import sanitize from 'sanitize-html'
 import { isSlug } from 'validator'
 import Project from '@/components/Project'
 import Schema from '@/components/Schema'
@@ -19,9 +18,7 @@ export const generateMetadata = async ({
 }) =>
 	params.then(
 		(v): Metadata => {
-			const slug = sanitize(v.slug + '')
-				.trim()
-				.toLowerCase()
+			const slug = (v.slug + '').trim().toLowerCase()
 			if(isSlug(slug) && slugs.includes(slug)) {
 				const project = projects.find(v => v.slug === slug)!
 				const path = `/projects/${v.slug}`
@@ -46,9 +43,7 @@ export const generateMetadata = async ({
 
 const Page = async ({ params }: { params: Promise<{ slug: string }> }) =>
 	params.then(v => {
-		const slug = sanitize(v.slug + '')
-			.trim()
-			.toLowerCase()
+		const slug = (v.slug + '').trim().toLowerCase()
 		if(isSlug(slug) && slugs.includes(slug)) {
 			const project = projects.find(v => v.slug === slug)!
 			return (

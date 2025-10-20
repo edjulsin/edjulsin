@@ -12,7 +12,7 @@ const smtp = () => new Resend(process.env.RESEND_API_KEY)
 
 const field = (name: string, form: FormData) => {
 	const value = form.get(name) ?? ''
-	return typeof value === 'string' ? sanitize(value.trim()) : ''
+	return typeof value === 'string' ? sanitize(value.trim(), { allowedTags: [], allowedAttributes: {} }) : ''
 }
 
 export const send = async (form: FormData): Promise<Partial<Form>> => {

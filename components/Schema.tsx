@@ -7,8 +7,8 @@ const Schema = <T extends Thing>({ value }: { value: WithContext<T> }) => (
 		dangerouslySetInnerHTML={{
 			__html: sanitize(JSON.stringify(value), {
 				allowedTags: [],
-				allowedAttributes: {},
-			}),
+				allowedAttributes: {}
+			})
 		}}
 	/>
 )
