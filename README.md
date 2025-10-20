@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌐 Edwin Julian — Front-End Developer
 
-## Getting Started
+Hi! I'm **Edwin Julian**, a passionate **Front-End Developer** from 🇮🇩 **Indonesia**.  
+I love crafting beautiful, fast, and accessible web experiences with modern web technologies like **Next.js**, **React**, and **TypeScript**.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 About the Project
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This is my **personal portfolio website**, built to showcase my projects, experience, and design approach.  
+It’s designed with a focus on **clean UI**, **smooth performance**, and **SEO optimization**.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 🧰 Tech Stack
+- **Next.js** — App Router, Metadata API, and Image Optimization  
+- **React** — Modern component-based UI  
+- **TypeScript** — Type-safe and scalable code  
+- **Tailwind CSS** — Utility-first responsive styling  
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🧑‍💻 About Me
 
-To learn more about Next.js, take a look at the following resources:
+I’m a self-taught front-end developer who enjoys turning ideas into interactive experiences.  
+Currently, I’m working full-time while building side projects to sharpen my skills and explore modern front-end ecosystems.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- 🌍 Based in **Indonesia**  
+- 💼 Focused on **React / Next.js** development  
+- 📚 Always learning about **UI/UX**, **web performance**, and **testing**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 📫 Contact
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- 🌐 [Portfolio Website](https://edjulsin.vercel.com)  
+- 🐙 [GitHub](https://github.com/edjulsin)
+- 💼 [LinkedIn](https://linkedin.com/in/edjulsin)  
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+> _“Code is like art — elegant when simple, powerful when thoughtful.”_ 🎨  
+> — Edwin Julian
