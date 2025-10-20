@@ -7,8 +7,7 @@ const projects = [
 	{
 		slug: 'katt',
 		title: 'Katt',
-		description:
-			'Katt is an easy-to-use blog CMS for gallery-style blogs with heavy use of images.\nSuitable for architecture or interior design website.',
+		description: 'Katt is an easy-to-use blog CMS for gallery-style blogs with heavy image use.\nIt’s suitable for architecture or interior design websites.',
 		stack: ['next', 'typescript', 'tailwind', 'supabase', 'resend'],
 		features: [
 			{
@@ -17,7 +16,7 @@ const projects = [
 			},
 			{
 				title: 'CMS',
-				description: ' Optimized for content with heavy image usage.',
+				description: 'Optimized for content with heavy image usage.',
 			},
 			{
 				title: 'Authentication',
@@ -29,7 +28,7 @@ const projects = [
 			},
 			{
 				title: 'SEO',
-				description: 'Make your blog search engine friendly.',
+				description: 'Turn your blog into a search-engine favorite.'
 			},
 		],
 		images: [
@@ -46,8 +45,7 @@ const projects = [
 	{
 		slug: 'krypton',
 		title: 'Krypton',
-		description:
-			'Krypton is real-time cryptocurrency dashboard with interactive & customizable chart.',
+		description: 'Krypton is real-time cryptocurrency dashboard with interactive & customizable chart.',
 		stack: ['react', 'd3', 'sass', 'canvas'],
 		features: [
 			{
@@ -60,7 +58,7 @@ const projects = [
 			},
 			{
 				title: 'Pixel perfect',
-				description: 'Super crisp chart ideal for snapshot.',
+				description: 'Super-crisp chart, ideal for snapshots.',
 			},
 			{
 				title: 'Responsive design',
