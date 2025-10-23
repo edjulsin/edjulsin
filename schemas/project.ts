@@ -13,16 +13,16 @@ const schema = (project: Project): WithContext<CreativeWork> => {
 	return {
 		'@context': 'https://schema.org',
 		'@type': 'CreativeWork',
-		name: capitalize(project.title),
-		url: `${url}/projects/${project.slug}`,
-		description: project.description,
-		creator: {
+		"name": capitalize(project.title),
+		"url": `${url}/projects/${project.slug}`,
+		"description": project.description,
+		"creator": {
 			'@type': 'Person',
-			name: name,
-			url: url
+			"name": name,
+			"url": url
 		},
-		image: url + thumbnail.data.src,
-		keywords: project.stack.map(capitalize)
+		"image": url + thumbnail.data.src,
+		"keywords": project.stack.map(capitalize)
 	}
 }
 

@@ -18,17 +18,17 @@ const schema = ({
 }): WithContext<Person> => ({
 	'@context': 'https://schema.org',
 	'@type': 'Person',
-	name: name,
-	url: url + path,
-	jobTitle: 'Frontend Developer',
-	worksFor: {
+	"name": name,
+	"url": url + path,
+	"jobTitle": 'Frontend Developer',
+	"worksFor": {
 		'@type': 'Organization',
-		name: 'Freelance',
+		"name": 'Freelance'
 	},
-	sameAs: [github, linkedin],
-	description: description,
-	image: url + '/banner.png',
-	knowsAbout: [
+	"sameAs": [github, linkedin],
+	"description": description,
+	"image": url + '/banner.png',
+	"knowsAbout": [
 		'react',
 		'next',
 		'javascript',

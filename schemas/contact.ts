@@ -15,14 +15,14 @@ const schema = ({
 }): WithContext<ContactPage> => ({
 	'@context': 'https://schema.org',
 	'@type': 'ContactPage',
-	name: 'Contact',
-	url: url + path,
-	description: description,
-	mainEntity: {
+	"name": 'Contact',
+	"url": url + path,
+	"description": description,
+	"mainEntity": {
 		'@type': 'Person',
-		name: name,
-		url: url,
-		jobTitle: 'Frontend Developer'
+		"name": name,
+		"url": url,
+		"jobTitle": 'Frontend Developer'
 	}
 })
 
