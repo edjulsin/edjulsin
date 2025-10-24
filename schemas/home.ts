@@ -24,7 +24,13 @@ const schema = ({ title, path, description }: {
 		"name": 'Freelance'
 	},
 	"sameAs": [github, linkedin],
-	"image": url + '/banner.png',
+	"image": {
+		"@type": "ImageObject",
+		"url": url + '/banner.png',
+		"name": title,
+		"width": { "@type": "QuantitativeValue", value: 1200 },
+		"height": { "@type": "QuantitativeValue", value: 630 }
+	},
 	"knowsAbout": [
 		'react',
 		'next',

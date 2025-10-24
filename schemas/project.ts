@@ -23,7 +23,13 @@ const schema = (project: Project): WithContext<CreativeWork> => {
 			"jobTitle": 'Frontend Developer',
 			"sameAs": [github, linkedin]
 		},
-		"image": url + thumbnail.data.src,
+		"image": {
+			"@type": "ImageObject",
+			"url": url + thumbnail.data.src,
+			"name": thumbnail.alt,
+			"width": { "@type": "QuantitativeValue", value: thumbnail.width },
+			"height": { "@type": "QuantitativeValue", value: thumbnail.height }
+		},
 		"keywords": project.stack.map(v => v.toLowerCase()),
 		"datePublished": project.published_at,
 		"dateModified": project.modified_at

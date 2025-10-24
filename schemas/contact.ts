@@ -19,6 +19,13 @@ const schema = ({ title, path, description }: {
 	"name": title,
 	"url": url + path,
 	"description": description,
+	"image": {
+		"@type": "ImageObject",
+		"url": url + '/banner.png',
+		"name": name,
+		"width": { "@type": "QuantitativeValue", value: 1200 },
+		"height": { "@type": "QuantitativeValue", value: 630 }
+	},
 	"mainEntity": {
 		'@type': 'Person',
 		"name": name,
