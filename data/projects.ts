@@ -2,7 +2,7 @@ import katt1 from '@/assets/katt/1.png'
 import katt2 from '@/assets/katt/2.png'
 import krypton1 from '@/assets/krypton/1.png'
 import krypton2 from '@/assets/krypton/2.png'
-import Project from '@/type/project'
+import type Project from '@/type/project'
 
 const projects: Project[] = [
 	{

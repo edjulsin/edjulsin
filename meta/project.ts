@@ -1,5 +1,5 @@
-import Project from '@/type/project';
-import { Metadata } from "next";
+import type { Metadata } from "next";
+import type Project from '@/type/project';
 
 const development = process.env.NODE_ENV === 'development'
 const name = process.env.NEXT_PUBLIC_SITE_NAME as string

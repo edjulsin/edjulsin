@@ -3,8 +3,9 @@ import { isSlug } from 'validator'
 import Project from '@/components/Project'
 import Schema from '@/components/Schema'
 import projects from '@/data/projects'
-import schema from '@/schemas/project'
 import projectMeta from '@/meta/project'
+import schema from '@/schemas/project'
+
 
 const slugs = projects.map(v => v.slug)
 
