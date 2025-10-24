@@ -8,6 +8,13 @@ import projectMeta from '@/meta/project'
 
 const slugs = projects.map(v => v.slug)
 
+export const dynamicParams = false
+
+export const generateStaticParams = async () =>
+	projects.map(v => {
+		return { slug: v.slug }
+	})
+
 export const generateMetadata = async ({ params, }: { params: Promise<{ slug: string }> }) =>
 	params.then(
 		v => {

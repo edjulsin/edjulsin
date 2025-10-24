@@ -1,5 +1,4 @@
 import type { Person, WithContext } from 'schema-dts'
-import capitalize from '@/utility/capitalize'
 
 const development = process.env.NODE_ENV === 'development'
 const url = development
@@ -37,7 +36,7 @@ const schema = ({ title, path, description }: {
 		'javascript',
 		'web development',
 		'frontend engineering'
-	].map(capitalize)
+	]
 })
 
 export default schema

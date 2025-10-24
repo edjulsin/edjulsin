@@ -1,7 +1,6 @@
 import { readFile } from 'node:fs/promises'
 import { join } from 'node:path'
 import { ImageResponse } from 'next/og'
-import sanitize from 'sanitize-html'
 import { isSlug } from 'validator'
 import projects from '@/data/projects'
 
@@ -14,14 +13,13 @@ const url = development
 	? 'http://localhost:3000'
 	: (process.env.NEXT_PUBLIC_SITE_URL as string)
 
-export const generateImageMetadata = async ({
-	params,
-}: {
-	params: { slug: string }
-}) => {
-	const slug = sanitize(params.slug + '')
-		.trim()
-		.toLowerCase()
+export const generateStaticParams = async () =>
+	projects.map(v => {
+		return { slug: v.slug }
+	})
+
+export const generateImageMetadata = async ({ params }: { params: { slug: string } }) => {
+	const slug = (params.slug + '').trim().toLowerCase()
 	if(isSlug(slug) && slugs.includes(slug)) {
 		const project = projects.find(v => v.slug === slug)!
 		return project.images.slice(0, 1).map((v, i) => {
@@ -38,9 +36,7 @@ export const generateImageMetadata = async ({
 }
 
 const Image = async ({ params, id, }: { id: number, params: { slug: string } }) => {
-	const slug = sanitize(params.slug + '')
-		.trim()
-		.toLowerCase()
+	const slug = (params.slug + '').trim().toLowerCase()
 	if(isSlug(slug) && slugs.includes(slug)) {
 		const project = projects.find(v => v.slug === slug)!
 		const thumbnail = project.images[id]
