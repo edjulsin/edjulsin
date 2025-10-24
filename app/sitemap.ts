@@ -24,12 +24,12 @@ const sitemap = (): MetadataRoute.Sitemap => {
 		...(projects.map(v => {
 			return {
 				url: `${url}/projects/${v.slug}`,
-				lastModified: modified,
+				lastModified: v.modified_at,
 				changeFrequency: 'monthly',
 				priority: 0.5,
 				images: v.images.map(v => v.data.src),
 			}
-		}) as MetadataRoute.Sitemap),
+		}) as MetadataRoute.Sitemap)
 	]
 }
 

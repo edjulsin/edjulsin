@@ -37,13 +37,7 @@ export const generateImageMetadata = async ({
 	}
 }
 
-const Image = async ({
-	params,
-	id,
-}: {
-	id: number
-	params: { slug: string }
-}) => {
+const Image = async ({ params, id, }: { id: number, params: { slug: string } }) => {
 	const slug = sanitize(params.slug + '')
 		.trim()
 		.toLowerCase()

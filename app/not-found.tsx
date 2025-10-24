@@ -1,6 +1,11 @@
 import Link from 'next/link'
 
-const Page = () => (
+export const metadata = {
+	title: 'Not Found',
+	description: 'This page could not be found.'
+}
+
+const Page = () =>
 	<main>
 		<section className='min-h-[80dvh] flex flex-col justify-center items-center text-center'>
 			<div>
@@ -18,6 +23,5 @@ const Page = () => (
 			</div>
 		</section>
 	</main>
-)
 
 export default Page

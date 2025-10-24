@@ -2,13 +2,17 @@ import katt1 from '@/assets/katt/1.png'
 import katt2 from '@/assets/katt/2.png'
 import krypton1 from '@/assets/krypton/1.png'
 import krypton2 from '@/assets/krypton/2.png'
+import Project from '@/type/project'
 
-const projects = [
+const projects: Project[] = [
 	{
+		type: 'fullstack',
 		slug: 'katt',
 		title: 'Katt',
 		description: 'Katt is an easy-to-use blog CMS for gallery-style blogs with heavy image use. It’s suitable for architecture or interior design websites.',
 		stack: ['next', 'typescript', 'tailwind', 'supabase', 'resend'],
+		published_at: new Date('2025-02-19').toISOString(),
+		modified_at: new Date('2025-10-24').toISOString(),
 		features: [
 			{
 				title: 'Drag & drop editor',
@@ -43,10 +47,13 @@ const projects = [
 		demo: 'https://kattinterior.vercel.app/',
 	},
 	{
+		type: 'frontend',
 		slug: 'krypton',
 		title: 'Krypton',
 		description: 'Krypton is real-time cryptocurrency dashboard with interactive & customizable chart.',
 		stack: ['react', 'd3', 'sass', 'canvas'],
+		published_at: new Date('2021-01-30').toISOString(),
+		modified_at: new Date('2025-10-09').toISOString(),
 		features: [
 			{
 				title: 'Zoom & drag',

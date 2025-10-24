@@ -6,23 +6,25 @@ const url = development
 	? 'http://localhost:3000'
 	: (process.env.NEXT_PUBLIC_SITE_URL as string)
 
-const schema = ({
-	path,
-	description,
-}: {
+const github = process.env.NEXT_PUBLIC_GITHUB as string
+const linkedin = process.env.NEXT_PUBLIC_LINKEDIN as string
+
+const schema = ({ title, path, description }: {
+	title: string,
 	path: string
 	description: string
 }): WithContext<ContactPage> => ({
 	'@context': 'https://schema.org',
 	'@type': 'ContactPage',
-	"name": 'Contact',
+	"name": title,
 	"url": url + path,
 	"description": description,
 	"mainEntity": {
 		'@type': 'Person',
 		"name": name,
 		"url": url,
-		"jobTitle": 'Frontend Developer'
+		"jobTitle": 'Frontend Developer',
+		"sameAs": [github, linkedin]
 	}
 })
 
