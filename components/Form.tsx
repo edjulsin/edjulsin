@@ -106,7 +106,7 @@ const Form = () => {
 			</Field>
 			<button
 				type='submit'
-				className='p-2 uppercase rounded-full outline-1 outline-neutral-500 cursor-pointer hover:bg-foreground hover:text-background disabled:text-neutral-500 disabled:cursor-not-allowed'
+				className='p-2 uppercase rounded-full outline-1 transition-colors outline-neutral-500 cursor-pointer hover:bg-foreground hover:text-background disabled:text-neutral-500 disabled:cursor-not-allowed'
 				disabled={pending || state.sent}
 			>
 				Send

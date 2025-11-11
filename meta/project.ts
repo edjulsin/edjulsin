@@ -8,13 +8,13 @@ const url = development ? 'http://localhost:3000' : process.env.NEXT_PUBLIC_SITE
 const projectMeta = (v: Project): Metadata => ({
     title: `${v.title} | By ${name}`,
     description: v.description,
-    alternates: { canonical: `${url}/${v.slug}` },
+    alternates: { canonical: `${url}/projects/${v.slug}` },
     openGraph: {
         type: 'article',
         siteName: name,
         title: v.title,
         description: v.description,
-        url: `${url}/${v.slug}`,
+        url: `${url}/projects/${v.slug}`,
         section: v.type,
         tags: v.stack.map(v => v.toLowerCase()),
         publishedTime: v.published_at,

@@ -10,7 +10,7 @@ const projects: Project[] = [
 		slug: 'katt',
 		title: 'Katt',
 		description: 'Katt is an easy-to-use blog CMS for gallery-style blogs with heavy image use. It’s suitable for architecture or interior design websites.',
-		stack: ['next', 'typescript', 'tailwind', 'supabase', 'resend'],
+		stack: ['next', 'typescript', 'tailwind', 'supabase', 'resend', 'radix-ui'],
 		published_at: new Date('2025-02-19').toISOString(),
 		modified_at: new Date('2025-10-24').toISOString(),
 		features: [
