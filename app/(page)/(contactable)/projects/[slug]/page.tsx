@@ -6,7 +6,6 @@ import projects from '@/data/projects'
 import projectMeta from '@/meta/project'
 import schema from '@/schemas/project'
 
-
 const slugs = projects.map(v => v.slug)
 
 export const dynamicParams = false
@@ -16,7 +15,7 @@ export const generateStaticParams = async () =>
 		return { slug: v.slug }
 	})
 
-export const generateMetadata = async ({ params, }: { params: Promise<{ slug: string }> }) =>
+export const generateMetadata = async ({ params }: { params: Promise<{ slug: string }> }) =>
 	params.then(
 		v => {
 			const slug = (v.slug + '').trim().toLowerCase()
