@@ -30,8 +30,8 @@ export const generateImageMetadata = async ({ params }: { params: { slug: string
 	}
 }
 
-const opengraph = async ({ params, id }: { id: number, params: { slug: string } }) =>
-	Promise.all([params, id]).then(([params, id]) => {
+const opengraph = async ({ params, id }: { id: Promise<number>, params: Promise<{ slug: string }> }) =>
+	Promise.all([params, id]).then(async ([params, id]) => {
 		const slug = (params.slug + '').trim().toLowerCase()
 		if(isSlug(slug) && slugs.includes(slug)) {
 			const project = projects.find(v => v.slug === slug)!
