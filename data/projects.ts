@@ -24,7 +24,7 @@ const projects: Project[] = [
 			},
 			{
 				title: 'Authentication',
-				description: 'Secure login with Supabase.',
+				description: 'Powered by Supabase',
 			},
 			{
 				title: 'Responsive design',

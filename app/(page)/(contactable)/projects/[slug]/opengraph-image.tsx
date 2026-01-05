@@ -55,7 +55,7 @@ const opengraph = async ({ params, id }: { id: number, params: { slug: string } 
 								justifyContent: 'center',
 								gap: '25px',
 								padding: '50px',
-								backgroundColor: 'white',
+								backgroundColor: 'black',
 							}}
 						>
 							<div
@@ -76,7 +76,7 @@ const opengraph = async ({ params, id }: { id: number, params: { slug: string } 
 										transform: 'rotate(-90deg)',
 										textOrientation: 'upright',
 										fontSize: '75px',
-										color: '#a1a1a1',
+										color: 'white',
 										textAlign: 'center',
 									}}
 								>
