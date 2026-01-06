@@ -23,8 +23,8 @@ const projects: Project[] = [
 				description: 'Optimized for content with heavy image usage.',
 			},
 			{
-				title: 'Authentication',
-				description: 'Powered by Supabase',
+				title: 'Database & User Management',
+				description: 'Powered by Supabase.',
 			},
 			{
 				title: 'Responsive design',
