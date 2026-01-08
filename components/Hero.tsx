@@ -13,7 +13,7 @@ const Hero = () => (
 		<div className='xl:items-end'>
 			<div className='flex flex-col gap-y-1 text-center'>
 				<h3 className='uppercase font-light text-xl md:text-2xl xl:text-3xl'>
-					Remote
+					Open to Remote
 				</h3>
 				<small className='capitalize text-sm md:text-base xl:text-lg text-neutral-500'>
 					Based in Indonesia 🇮🇩
