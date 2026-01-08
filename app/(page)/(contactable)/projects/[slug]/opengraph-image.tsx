@@ -8,10 +8,7 @@ const slugs = projects.map(v => v.slug)
 
 const size = { width: 1200, height: 630 }
 
-const development = process.env.NODE_ENV === 'development'
-const url = development
-	? 'http://localhost:3000'
-	: (process.env.NEXT_PUBLIC_SITE_URL as string)
+const url = process.env.NEXT_PUBLIC_SITE_URL as string
 
 export const generateImageMetadata = async ({ params }: { params: { slug: string } }) => {
 	const slug = (params.slug + '').trim().toLowerCase()
@@ -55,7 +52,7 @@ const opengraph = async ({ params, id }: { id: Promise<number>, params: Promise<
 								justifyContent: 'center',
 								gap: '25px',
 								padding: '50px',
-								backgroundColor: 'black',
+								backgroundColor: '#0a0a0a',
 							}}
 						>
 							<div
@@ -76,7 +73,7 @@ const opengraph = async ({ params, id }: { id: Promise<number>, params: Promise<
 										transform: 'rotate(-90deg)',
 										textOrientation: 'upright',
 										fontSize: '75px',
-										color: 'white',
+										color: '#ededed',
 										textAlign: 'center',
 									}}
 								>

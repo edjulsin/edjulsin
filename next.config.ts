@@ -1,7 +1,5 @@
 import type { NextConfig } from 'next'
 
-const development = process.env.NODE_ENV === 'development'
-
 const CSP = `
     default-src 'self';
     script-src 'self' 'unsafe-eval' 'unsafe-inline';

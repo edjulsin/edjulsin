@@ -1,10 +1,7 @@
 import type { MetadataRoute } from 'next'
 import projects from '@/data/projects'
 
-const development = process.env.NODE_ENV === 'development'
-const url = development
-	? 'http://localhost:3000'
-	: (process.env.NEXT_PUBLIC_SITE_URL as string)
+const url = process.env.NEXT_PUBLIC_SITE_URL as string
 
 const sitemap = (): MetadataRoute.Sitemap => {
 	const modified = new Date()

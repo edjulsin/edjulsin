@@ -1,11 +1,7 @@
 import type { ContactPage, WithContext } from 'schema-dts'
 
-const development = process.env.NODE_ENV === 'development'
 const name = process.env.NEXT_PUBLIC_SITE_NAME
-const url = development
-	? 'http://localhost:3000'
-	: (process.env.NEXT_PUBLIC_SITE_URL as string)
-
+const url = process.env.NEXT_PUBLIC_SITE_URL as string
 const github = process.env.NEXT_PUBLIC_GITHUB as string
 const linkedin = process.env.NEXT_PUBLIC_LINKEDIN as string
 
