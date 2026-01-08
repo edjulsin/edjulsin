@@ -8,6 +8,10 @@ import { isEmail, isLength } from 'validator'
 import Email from '@/components/Email'
 import type { Form } from '@/type/form'
 
+const emailFrom = process.env.RESEND_EMAIL_FROM as string
+const emailTo = process.env.RESEND_EMAIL_TO as string
+const siteName = process.env.NEXT_PUBLIC_SITE_NAME as string
+
 const smtp = () => new Resend(process.env.RESEND_API_KEY)
 
 const field = (name: string, form: FormData) => {
@@ -46,9 +50,9 @@ export const send = async (form: FormData): Promise<Partial<Form>> => {
 				return smtp()
 					.emails.send(
 						{
-							from: `${value.name} <${process.env.RESEND_EMAIL_SENDER as string}>`, // change this after acquiring domain
-							to: process.env.RESEND_EMAIL_RECEIVER as string,
-							subject: `Contact from ${process.env.NEXT_PUBLIC_SITE_NAME}`,
+							from: `${value.name} <${emailFrom}>`, // change this after acquiring domain
+							to: emailTo,
+							subject: `Contact from ${siteName}`,
 							html: v,
 							text: toPlainText(v),
 							replyTo: value.email,

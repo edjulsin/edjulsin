@@ -15,10 +15,7 @@ import {
 	Text,
 } from '@react-email/components'
 
-const development = process.env.NODE_ENV === 'development'
-const url = development
-	? 'http://localhost:3000'
-	: process.env.NEXT_PUBLIC_SITE_URL
+const url = process.env.NEXT_PUBLIC_SITE_URL
 const banner = `${url}/banner.png`
 const domain = process.env.NEXT_PUBLIC_SITE_NAME as string
 
