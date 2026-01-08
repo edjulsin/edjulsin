@@ -30,7 +30,7 @@ Currently, I’m working full-time while building side projects to sharpen my sk
 
 ## 📫 Contact
 
-- 🌐 [Portfolio Website](https://edjulsin.vercel.app)  
+- 🌐 [Portfolio Website](https://edjulsin.dev)  
 - 🐙 [GitHub](https://github.com/edjulsin)
 - 💼 [LinkedIn](https://linkedin.com/in/edjulsin)  
 
