@@ -6,47 +6,6 @@ import type Project from '@/type/project'
 
 const projects: Project[] = [
 	{
-		type: 'fullstack',
-		slug: 'katt',
-		title: 'Katt',
-		description: 'Katt is an easy-to-use blog CMS for gallery-style blogs with heavy image use. It’s suitable for architecture or interior design websites.',
-		stack: ['next', 'typescript', 'tailwind', 'supabase', 'resend', 'radix-ui'],
-		published_at: new Date('2025-02-19').toISOString(),
-		modified_at: new Date('2025-10-24').toISOString(),
-		features: [
-			{
-				title: 'Drag & drop editor',
-				description: 'Edit images and layout with ease.',
-			},
-			{
-				title: 'CMS',
-				description: 'Optimized for content with heavy image usage.',
-			},
-			{
-				title: 'Database & User Management',
-				description: 'Powered by Supabase.',
-			},
-			{
-				title: 'Responsive design',
-				description: 'Works across desktop, tablet, and mobile.',
-			},
-			{
-				title: 'SEO',
-				description: 'Turn your blog into a search-engine favorite.'
-			},
-		],
-		images: [
-			{ width: katt1.width, height: katt1.height, data: katt1, alt: 'Katt`s home page' },
-			{
-				width: katt2.width,
-				height: katt2.height,
-				data: katt2,
-				alt: 'Katt`s editor page',
-			},
-		],
-		demo: 'https://kattinterior.vercel.app/',
-	},
-	{
 		type: 'frontend',
 		slug: 'krypton',
 		title: 'Krypton',
@@ -88,6 +47,47 @@ const projects: Project[] = [
 			},
 		],
 		demo: 'https://krypton-navy.vercel.app/',
+	},
+	{
+		type: 'fullstack',
+		slug: 'katt',
+		title: 'Katt',
+		description: 'Katt is an easy-to-use blog CMS for gallery-style blogs with heavy image use. It’s suitable for architecture or interior design websites.',
+		stack: ['next', 'typescript', 'tailwind', 'supabase', 'resend', 'radix-ui'],
+		published_at: new Date('2025-02-19').toISOString(),
+		modified_at: new Date('2025-10-24').toISOString(),
+		features: [
+			{
+				title: 'Drag & drop editor',
+				description: 'Edit images and layout with ease.',
+			},
+			{
+				title: 'CMS',
+				description: 'Optimized for content with heavy image usage.',
+			},
+			{
+				title: 'Database & User Management',
+				description: 'Powered by Supabase.',
+			},
+			{
+				title: 'Responsive design',
+				description: 'Works across desktop, tablet, and mobile.',
+			},
+			{
+				title: 'SEO',
+				description: 'Turn your blog into a search-engine favorite.'
+			},
+		],
+		images: [
+			{ width: katt1.width, height: katt1.height, data: katt1, alt: 'Katt`s home page' },
+			{
+				width: katt2.width,
+				height: katt2.height,
+				data: katt2,
+				alt: 'Katt`s editor page',
+			},
+		],
+		demo: 'https://kattinterior.vercel.app/',
 	}
 ]
 
