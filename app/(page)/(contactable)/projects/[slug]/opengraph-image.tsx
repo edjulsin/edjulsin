@@ -8,18 +8,20 @@ const slugs = projects.map(v => v.slug)
 
 const size = { width: 1200, height: 630 }
 
+const type = 'image/png'
+
 const url = process.env.NEXT_PUBLIC_SITE_URL as string
 
 export const generateImageMetadata = async ({ params }: { params: { slug: string } }) => {
 	const slug = (params.slug + '').trim().toLowerCase()
-	if(isSlug(slug) && slugs.includes(slug)) {
-		const project = projects.find(v => v.slug === slug)!
-		return project.images.slice(0, 1).map((v, i) => {
+	const index = slugs.findIndex(v => v === slug)
+	if(isSlug(slug) && index >= 0) {
+		return [projects[index]].map((v, i) => {
 			return {
-				id: i + 1,
-				alt: v.alt,
+				id: i,
+				alt: v.screenshot.alt,
 				size: size,
-				contentType: 'image/png',
+				contentType: type,
 			}
 		})
 	} else {
@@ -27,75 +29,75 @@ export const generateImageMetadata = async ({ params }: { params: { slug: string
 	}
 }
 
-const opengraph = async ({ params, id }: { id: Promise<number>, params: Promise<{ slug: string }> }) =>
-	Promise.all([params, id]).then(async ([params, id]) => {
+const opengraph = async ({ params }: { params: Promise<{ slug: string }> }) =>
+	params.then(async params => {
 		const slug = (params.slug + '').trim().toLowerCase()
-		if(isSlug(slug) && slugs.includes(slug)) {
-			const project = projects.find(v => v.slug === slug)!
-			const thumbnail = project.images[id]
+		const index = slugs.findIndex(v => v === slug)
+		if(isSlug(slug) && index >= 0) {
+			const project = projects[index]
+			const thumbnail = project.screenshot
 			return readFile(
 				join(
 					process.cwd(),
-					`/assets/${project.slug.toLowerCase()}/${id}.png`,
+					`/assets/${project.slug.toLowerCase()}/screenshot.png`,
 				),
 				'base64',
 			).then(
-				v =>
-					new ImageResponse(
+				v => new ImageResponse(
+					<div
+						style={{
+							display: 'flex',
+							flexDirection: 'row',
+							height: '100%',
+							width: '100%',
+							alignItems: 'center',
+							justifyContent: 'center',
+							gap: '25px',
+							padding: '50px',
+							backgroundColor: '#0a0a0a',
+						}}
+					>
 						<div
 							style={{
 								display: 'flex',
-								flexDirection: 'row',
+								flexDirection: 'column',
+								width: '30%',
 								height: '100%',
-								width: '100%',
 								alignItems: 'center',
 								justifyContent: 'center',
-								gap: '25px',
-								padding: '50px',
-								backgroundColor: '#0a0a0a',
+								borderRadius: '15px',
 							}}
 						>
-							<div
+							<h1
 								style={{
-									display: 'flex',
-									flexDirection: 'column',
-									width: '30%',
-									height: '100%',
-									alignItems: 'center',
-									justifyContent: 'center',
-									borderRadius: '15px',
+									textTransform: 'uppercase',
+									writingMode: 'vertical-rl',
+									transform: 'rotate(-90deg)',
+									textOrientation: 'upright',
+									fontSize: '75px',
+									color: '#ededed',
+									textAlign: 'center',
 								}}
 							>
-								<h1
-									style={{
-										textTransform: 'uppercase',
-										writingMode: 'vertical-rl',
-										transform: 'rotate(-90deg)',
-										textOrientation: 'upright',
-										fontSize: '75px',
-										color: '#ededed',
-										textAlign: 'center',
-									}}
-								>
-									{project.title}
-								</h1>
-							</div>
-							<img
-								style={{
-									width: '70%',
-									height: '100%',
-									objectFit: 'cover',
-									objectPosition: 'center',
-									borderRadius: '15px',
-								}}
-								src={`data:image/png;base64,${v}`}
-								alt={thumbnail.alt}
-								width={thumbnail.width}
-								height={thumbnail.height}
-							/>
-						</div>,
-						size,
-					),
+								{project.title}
+							</h1>
+						</div>
+						<img
+							style={{
+								width: '70%',
+								height: '100%',
+								objectFit: 'cover',
+								objectPosition: 'center',
+								borderRadius: '15px',
+							}}
+							src={`data:image/png;base64,${v}`}
+							alt={thumbnail.alt}
+							width={thumbnail.width}
+							height={thumbnail.height}
+						/>
+					</div>,
+					size
+				)
 			)
 		} else {
 			return Promise.resolve(
@@ -123,8 +125,8 @@ const opengraph = async ({ params, id }: { id: Promise<number>, params: Promise<
 							height={size.height}
 						/>
 					</div>,
-					size,
-				),
+					size
+				)
 			)
 		}
 	})

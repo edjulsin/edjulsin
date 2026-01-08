@@ -1,9 +1,11 @@
 import katt1 from '@/assets/katt/1.gif'
 import katt2 from '@/assets/katt/2.gif'
 import katt3 from '@/assets/katt/3.gif'
+import kattScreenshot from '@/assets/katt/screenshot.png'
 import krypton1 from '@/assets/krypton/1.gif'
 import krypton2 from '@/assets/krypton/2.gif'
 import krypton3 from '@/assets/krypton/3.gif'
+import kryptonScreenshot from '@/assets/krypton/screenshot.png'
 import type Project from '@/type/project'
 
 const projects: Project[] = [
@@ -37,6 +39,12 @@ const projects: Project[] = [
 				description: 'Create and customize your own charts.',
 			},
 		],
+		screenshot: {
+			width: kryptonScreenshot.width,
+			height: kryptonScreenshot.height,
+			data: kryptonScreenshot,
+			alt: 'Krypton`s screenshot'
+		},
 		images: [
 			{
 				width: krypton1.width,
@@ -88,8 +96,13 @@ const projects: Project[] = [
 				title: 'SEO',
 				description: 'Optimize your blog to rank higher in search engines.',
 			},
-		]
-		,
+		],
+		screenshot: {
+			width: kattScreenshot.width,
+			height: kattScreenshot.height,
+			data: kattScreenshot,
+			alt: 'Katt`s screenshot'
+		},
 		images: [
 			{
 				width: katt1.width,

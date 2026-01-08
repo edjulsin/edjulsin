@@ -1,4 +1,4 @@
-import type { StaticImageData } from 'next/image'
+import { Photo } from './photo'
 
 type Project = {
 	type: 'fullstack' | 'backend' | 'frontend',
@@ -9,12 +9,8 @@ type Project = {
 	published_at: string,
 	modified_at: string,
 	features: { title: string; description: string }[]
-	images: {
-		width: number
-		height: number
-		data: StaticImageData
-		alt: string
-	}[]
+	screenshot: Photo,
+	images: Photo[]
 	demo: string
 }
 

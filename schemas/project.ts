@@ -8,7 +8,7 @@ const github = process.env.NEXT_PUBLIC_GITHUB as string
 const linkedin = process.env.NEXT_PUBLIC_LINKEDIN as string
 
 const schema = (project: Project): WithContext<CreativeWork> => {
-	const [thumbnail] = project.images
+	const thumbnail = project.screenshot
 	return {
 		'@context': 'https://schema.org',
 		'@type': 'CreativeWork',
