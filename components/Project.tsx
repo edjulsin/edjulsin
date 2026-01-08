@@ -87,6 +87,7 @@ const Project = ({
 						>
 							<Image
 								className='size-full'
+								unoptimized={true}
 								src={v.data}
 								alt={v.alt}
 								width={v.width}

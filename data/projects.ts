@@ -1,7 +1,9 @@
-import katt1 from '@/assets/katt/1.png'
-import katt2 from '@/assets/katt/2.png'
-import krypton1 from '@/assets/krypton/1.png'
-import krypton2 from '@/assets/krypton/2.png'
+import katt1 from '@/assets/katt/1.gif'
+import katt2 from '@/assets/katt/2.gif'
+import katt3 from '@/assets/katt/3.gif'
+import krypton1 from '@/assets/krypton/1.gif'
+import krypton2 from '@/assets/krypton/2.gif'
+import krypton3 from '@/assets/krypton/3.gif'
 import type Project from '@/type/project'
 
 const projects: Project[] = [
@@ -15,36 +17,45 @@ const projects: Project[] = [
 		modified_at: new Date('2025-10-09').toISOString(),
 		features: [
 			{
-				title: 'Zoom & drag',
-				description: 'Interactive chart powered by HTML5 canvas & D3.',
+				title: 'Zoom & Drag',
+				description: 'Interactive charts powered by HTML5 Canvas and D3.js.',
 			},
 			{
 				title: 'Realtime',
-				description: 'Realtime data handled RXJS web socket.',
+				description: 'Realtime data streaming via RxJS WebSocket.',
 			},
 			{
-				title: 'Pixel perfect',
-				description: 'Super-crisp chart, ideal for snapshots.',
+				title: 'Pixel-Perfect',
+				description: 'Super-crisp charts, perfect for snapshots.',
 			},
 			{
-				title: 'Responsive design',
-				description: 'Work across desktop, tablet, and mobile.',
+				title: 'Responsive Design',
+				description: 'Works seamlessly on desktop, tablet, and mobile.',
 			},
-			{ title: 'Customizable', description: 'Make your own chart.' },
+			{
+				title: 'Full Customization',
+				description: 'Create and customize your own charts.',
+			},
 		],
 		images: [
 			{
 				width: krypton1.width,
 				height: krypton1.height,
 				data: krypton1,
-				alt: 'Krypton`s primary chart',
+				alt: 'Krypton`s multi-chart'
 			},
 			{
 				width: krypton2.width,
 				height: krypton2.height,
 				data: krypton2,
-				alt: 'Krypton`s secondary chart',
+				alt: 'Krypton`s interactive chart'
 			},
+			{
+				width: krypton3.width,
+				height: krypton3.height,
+				data: krypton3,
+				alt: 'Krypton`s chart using websocket',
+			}
 		],
 		demo: 'https://krypton-navy.vercel.app/',
 	},
@@ -58,33 +69,45 @@ const projects: Project[] = [
 		modified_at: new Date('2025-10-24').toISOString(),
 		features: [
 			{
-				title: 'Drag & drop editor',
-				description: 'Edit images and layout with ease.',
+				title: 'Drag & Drop Editor',
+				description: 'Easily edit images and layouts with a simple interface.',
 			},
 			{
 				title: 'CMS',
-				description: 'Optimized for content with heavy image usage.',
+				description: 'Optimized for content-rich blogs with heavy image usage.',
 			},
 			{
 				title: 'Database & User Management',
-				description: 'Powered by Supabase.',
+				description: 'Securely powered by Supabase for seamless data handling.',
 			},
 			{
-				title: 'Responsive design',
-				description: 'Works across desktop, tablet, and mobile.',
+				title: 'Responsive Design',
+				description: 'Works flawlessly across desktop, tablet, and mobile devices.',
 			},
 			{
 				title: 'SEO',
-				description: 'Turn your blog into a search-engine favorite.'
+				description: 'Optimize your blog to rank higher in search engines.',
 			},
-		],
+		]
+		,
 		images: [
-			{ width: katt1.width, height: katt1.height, data: katt1, alt: 'Katt`s home page' },
+			{
+				width: katt1.width,
+				height: katt1.height,
+				data: katt1,
+				alt: 'Katt`s home page'
+			},
 			{
 				width: katt2.width,
 				height: katt2.height,
 				data: katt2,
-				alt: 'Katt`s editor page',
+				alt: 'Katt`s editor during drag and resize',
+			},
+			{
+				width: katt3.width,
+				height: katt3.height,
+				data: katt3,
+				alt: 'Katt`s editor during crop',
 			},
 		],
 		demo: 'https://kattinterior.vercel.app/',
