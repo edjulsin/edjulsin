@@ -45,17 +45,18 @@ export const send = async (form: FormData): Promise<Partial<Form>> => {
 			)
 		)
 	} else {
-		return render(Email(value)).then(
+		const content = Email(value)
+		return render(content).then(
 			v => {
 				return smtp()
 					.emails.send(
 						{
-							from: `${value.name} <${emailFrom}>`, // change this after acquiring domain
+							from: `${siteName} <${emailFrom}>`,
 							to: emailTo,
-							subject: `Contact from ${siteName}`,
+							subject: `New Contact Form`,
 							html: v,
 							text: toPlainText(v),
-							replyTo: value.email,
+							replyTo: value.email
 						},
 						{
 							idempotencyKey: crypto
