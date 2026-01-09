@@ -16,24 +16,22 @@ export const generateStaticParams = async () =>
 	})
 
 export const generateMetadata = async ({ params }: { params: Promise<{ slug: string }> }) =>
-	params.then(
-		v => {
-			const slug = (v.slug + '').trim().toLowerCase()
-			if(isSlug(slug) && slugs.includes(slug)) {
-				const project = projects.find(v => v.slug === slug)!
-				return projectMeta(project)
-			} else {
-				notFound()
-			}
-		},
-		() => ({})
-	)
+	params.then(v => {
+		const slug = (v.slug + '').trim().toLowerCase()
+		const index = slugs.findIndex(v => v === slug)
+		if(isSlug(slug) && index >= 0) {
+			return projectMeta(projects[index])
+		} else {
+			notFound()
+		}
+	})
 
 const Page = async ({ params }: { params: Promise<{ slug: string }> }) =>
 	params.then(v => {
 		const slug = (v.slug + '').trim().toLowerCase()
-		if(isSlug(slug) && slugs.includes(slug)) {
-			const project = projects.find(v => v.slug === slug)!
+		const index = slugs.findIndex(v => v === slug)
+		if(isSlug(slug) && index >= 0) {
+			const project = projects[index]
 			return (
 				<>
 					<Schema value={schema(project)} />
