@@ -1,40 +1,13 @@
 # 🌐 Edwin Julian — Front-End Developer
 
-Hi! I'm **Edwin Julian**, a passionate **Front-End Developer** from 🇮🇩 **Indonesia**.  
-I love crafting beautiful, fast, and accessible web experiences with modern web technologies like **Next.js**, **React**, and **TypeScript**.
+Hi, I’m **Edwin Julian**, a Front-End Developer from Indonesia with **4+ years of experience** building clean, fast, and maintainable web interfaces using **D3.js**, **React**, **Next.js**, and **TypeScript**. I’m especially interested in **data visualization** and applying **functional programming** principles to create predictable, composable, and scalable UI.
 
----
+This repository contains the source code for my personal portfolio, where I showcase selected projects and my approach to performance, accessibility, and modern front-end architecture for production-ready applications.
 
-## 🚀 About the Project
+I currently work full-time and continue to grow through side projects, deepening my skills in UI/UX, web performance, testing, and data-driven interfaces. I’m looking to contribute to a remote, product-focused team where I can collaborate with designers and engineers to build high-quality user experiences.
 
-This is my **personal portfolio website**, built to showcase my projects, experience, and design approach.  
+- 🌐 https://edjulsin.dev  
+- 🐙 https://github.com/edjulsin  
+- 💼 https://linkedin.com/in/edjulsin  
 
-### 🧰 Tech Stack
-- **Next.js** — App Router, Metadata API, and Image Optimization  
-- **React** — Modern component-based UI  
-- **TypeScript** — Type-safe and scalable code  
-- **Tailwind CSS** — Utility-first responsive styling  
-
----
-
-## 🧑‍💻 About Me
-
-I’m a self-taught front-end developer who enjoys turning ideas into interactive experiences.  
-Currently, I’m working full-time while building side projects to sharpen my skills and explore modern front-end ecosystems.
-
-- 🌍 Based in **Indonesia**  
-- 💼 Focused on **React / Next.js** development  
-- 📚 Always learning about **UI/UX**, **web performance**, and **testing**
-
----
-
-## 📫 Contact
-
-- 🌐 [Portfolio Website](https://edjulsin.dev)  
-- 🐙 [GitHub](https://github.com/edjulsin)
-- 💼 [LinkedIn](https://linkedin.com/in/edjulsin)  
-
----
-
-> _“Code is like art — elegant when simple, powerful when thoughtful.”_ 🎨  
-> — Edwin Julian
+> “Code is like art — elegant when simple, powerful when thoughtful.”
