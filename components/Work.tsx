@@ -4,7 +4,7 @@ import projects from '@/data/projects'
 import Intersector from './Intersector'
 
 const Work = () =>
-	<section className='*:uppercase min-h-[100dvh] flex flex-col justify-center gap-y-15 md:gap-y-20 xl:gap-y-25'>
+	<section className='tracking-tight *:uppercase min-h-[100dvh] flex flex-col justify-center gap-y-15 md:gap-y-20 xl:gap-y-25'>
 		<Intersector selectors={['.work-list']} options={{ threshold: 0.5 }} />
 		<h2 className='flex flex-col gap-y-2 md:gap-y-4 xl:gap-y-6'>
 			<span className='text-neutral-500 text-3xl md:text-5xl xl:text-7xl'>

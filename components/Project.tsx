@@ -23,9 +23,9 @@ const Project = ({
 	demo: string
 }) => (
 	<article className='grid xl:grid-cols-[.6fr_.4fr] gap-30 py-10'>
-		<section className='flex flex-col justify-center gap-y-15'>
+		<section className='flex flex-col gap-y-15'>
 			<header className='flex flex-col justify-center gap-y-10'>
-				<h1 className='uppercase text-6xl/tight md:text-7xl/tight xl:text-8xl/tight'>
+				<h1 className='tracking-tight uppercase text-6xl/tight md:text-7xl/tight xl:text-8xl/tight'>
 					{title}
 				</h1>
 				<ul className='uppercase flex flex-wrap gap-3 text-sm md:text-base xl:text-lg font-medium'>
@@ -38,20 +38,20 @@ const Project = ({
 						</li>
 					))}
 				</ul>
-				<p className='text-lg/loose md:text-xl/loose xl:text-2xl/loose whitespace-pre-wrap'>
+				<p className='text-lg/relaxed md:text-xl/relaxed xl:text-2xl/relaxed whitespace-pre-wrap'>
 					{description}
 				</p>
 			</header>
 			<section className='flex flex-col justify-center gap-y-5'>
-				<h3 className='capitalize text-2xl/loose md:text-3xl/loose xl:text-4xl/loose font-medium text-neutral-500 border-b-1 border-b-neutral-800'>
+				<h3 className='capitalize text-2xl/relaxed md:text-3xl/relaxed xl:text-4xl/relaxed font-medium text-neutral-500 border-b-1 border-b-neutral-800'>
 					Features
 				</h3>
-				<ul className='flex flex-col gap-y-5 xl:gap-y-10 justify-center'>
+				<ul className='flex flex-col gap-y-10 justify-center'>
 					{
 						features.map(({ title, description }) =>
 							<li
 								key={title + description}
-								className='flex flex-col text-lg/loose md:text-xl/loose xl:text-2xl/loose'
+								className='flex flex-col text-lg/relaxed md:text-xl/relaxed xl:text-2xl/relaxed'
 							>
 								<span className='capitalize font-semibold'>
 									{title}

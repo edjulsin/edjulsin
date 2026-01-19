@@ -6,8 +6,8 @@ const Item = ({
 }: {
 	title: string
 	description: string
-}) => (
-	<li className='flex flex-row-reverse gap-x-35 items-center group intro-item'>
+}) =>
+	<li className='flex flex-row-reverse gap-x-35 items-center group intro-item tracking-tight'>
 		<h5
 			className='
             uppercase 
@@ -38,7 +38,6 @@ const Item = ({
 			{description}
 		</p>
 	</li>
-)
 
 const Intro = () => (
 	<section className='min-h-[150dvh] xl:min-h-[300dvh] flex flex-col justify-center'>

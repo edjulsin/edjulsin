@@ -1,12 +1,12 @@
 const Hero = () => (
 	<section className='min-h-[80dvh] grid grid-rows-[2fr_1fr_.5fr] *:flex *:flex-col *:justify-center *:items-center'>
 		<div>
-			<h1 className='uppercase flex flex-col gap-1 md:gap-2 xl:gap-4'>
+			<h1 className='tracking-tight uppercase flex flex-col gap-1 md:gap-2 xl:gap-4'>
 				<span className='text-5xl md:text-7xl xl:text-9xl'>
 					Frontend
 				</span>
 				<span className='text-4xl md:text-6xl xl:text-8xl text-neutral-500'>
-					Developer
+					Engineer
 				</span>
 			</h1>
 		</div>
