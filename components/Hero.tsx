@@ -16,7 +16,7 @@ const Hero = () => (
 					Open to Remote
 				</h3>
 				<small className='capitalize text-sm md:text-base xl:text-lg text-neutral-500'>
-					Based in Indonesia 🇮🇩
+					(UTC + 7)
 				</small>
 			</div>
 		</div>

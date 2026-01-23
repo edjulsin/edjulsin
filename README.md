@@ -1,10 +1,10 @@
-# 🌐 Edwin Julian — Front-End Developer
+# Edwin Julian
 
-Hi, I’m Edwin Julian 👋, a **Front-End Developer** with over **4 years of experience** building websites that are **fast, intuitive, and enjoyable to use**. I work with **D3.js**, **React**, **Next.js**, and **TypeScript**, and I’m passionate about **functional programming** and **data visualization**.
+I’m a **Front-End Engineer** with **5+ years of experience** building web applications using **React, Next.js, TypeScript, and D3.js**, with a particular interest in **functional programming** and **data visualization**.
 
-This portfolio is where I share some of my **favorite projects** and demonstrate how I think about **performance, accessibility, and building modern web applications**.  
+This portfolio includes a selection of projects that reflect how I think about **performance**, **accessibility**, and building **maintainable user interfaces**.
 
-I currently work full-time but enjoy exploring **side projects** to deepen my skills in **UI/UX, web performance, testing, and data-driven interfaces**. I’m interested in collaborating with **designers and engineers** on projects that focus on **high-quality user experiences**.
+I currently work full-time and spend some of my free time on side projects, mainly to explore topics like **UI/UX**, **web performance**, **testing**, and **data-driven interfaces**. I’m used to working with **remote, distributed teams** and collaborating with **designers and engineers** across different time zones.
 
 - 🌐 https://edjulsin.dev  
 - 🐙 https://github.com/edjulsin  
