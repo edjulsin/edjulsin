@@ -1,12 +1,6 @@
 import Intersector from './Intersector'
 
-const Item = ({
-	title,
-	description,
-}: {
-	title: string
-	description: string
-}) =>
+const Item = ({ title, description, }: { title: string, description: string }) =>
 	<li className='flex flex-row-reverse gap-x-35 items-center group intro-item tracking-tight'>
 		<h5
 			className='

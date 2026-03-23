@@ -1,3 +1,5 @@
+import type Project from '@/type/project'
+
 import katt1 from '@/assets/katt/1.gif'
 import katt2 from '@/assets/katt/2.gif'
 import katt3 from '@/assets/katt/3.gif'
@@ -6,9 +8,67 @@ import krypton1 from '@/assets/krypton/1.gif'
 import krypton2 from '@/assets/krypton/2.gif'
 import krypton3 from '@/assets/krypton/3.gif'
 import kryptonScreenshot from '@/assets/krypton/screenshot.png'
-import type Project from '@/type/project'
+import finns1 from '@/assets/finns/1.png'
+import finns2 from '@/assets/finns/2.png'
+import finns3 from '@/assets/finns/3.png'
+import finnsScreenshot from '@/assets/finns/screenshot.png'
 
 const projects: Project[] = [
+	{
+		type: 'frontend',
+		slug: 'finns',
+		title: 'Finns',
+		description: 'An interactive booking engine optimized for high conversion, designed for FINNS Beach Club—Bali’s most visited destination.',
+		stack: ['next', 'typescript', 'd3', 'tailwind', 'radix-ui', 'figma'],
+		published_at: new Date('2026-03-24').toISOString(),
+		modified_at: new Date('2026-03-24').toISOString(),
+		features: [
+			{
+				title: 'High-fidelity Booking Engine',
+				description: 'Conversion-driven seat selection.'
+			},
+			{
+				title: 'Zoom & Drag',
+				description: 'Interactive SVG seat chart powered by D3.js.',
+			},
+			{
+				title: 'Adaptive UI System',
+				description: 'Non-blocking UI for seamless selection on any screen.',
+			},
+			{
+				title: 'Multi-date Booking System',
+				description: 'Select seats across multiple dates in one booking.',
+			},
+			{
+				title: 'Real-time Booking System',
+				description: 'Get real-time notification on seats availablity.',
+			},
+			{
+				title: 'Smart Selection',
+				description: 'One click to find the best available seats.',
+			},
+			{
+				title: 'Shareable Booking State',
+				description: 'Easily share selected seats to enable faster decision-making.',
+			},
+		],
+		screenshot: { data: finnsScreenshot, alt: 'Finns` screenshot' },
+		images: [
+			{
+				data: finns1,
+				alt: 'Finns booking UI'
+			},
+			{
+				data: finns2,
+				alt: 'Finns product page'
+			},
+			{
+				data: finns3,
+				alt: 'Finns checkout page',
+			}
+		],
+		demo: 'https://finns-eight.vercel.app/book',
+	},
 	{
 		type: 'frontend',
 		slug: 'krypton',
@@ -40,27 +100,19 @@ const projects: Project[] = [
 			},
 		],
 		screenshot: {
-			width: kryptonScreenshot.width,
-			height: kryptonScreenshot.height,
 			data: kryptonScreenshot,
 			alt: 'Krypton`s screenshot'
 		},
 		images: [
 			{
-				width: krypton1.width,
-				height: krypton1.height,
 				data: krypton1,
 				alt: 'Krypton`s multi-chart'
 			},
 			{
-				width: krypton2.width,
-				height: krypton2.height,
 				data: krypton2,
 				alt: 'Krypton`s interactive chart'
 			},
 			{
-				width: krypton3.width,
-				height: krypton3.height,
 				data: krypton3,
 				alt: 'Krypton`s chart using websocket',
 			}
@@ -98,27 +150,19 @@ const projects: Project[] = [
 			},
 		],
 		screenshot: {
-			width: kattScreenshot.width,
-			height: kattScreenshot.height,
 			data: kattScreenshot,
 			alt: 'Katt`s screenshot'
 		},
 		images: [
 			{
-				width: katt1.width,
-				height: katt1.height,
 				data: katt1,
 				alt: 'Katt`s home page'
 			},
 			{
-				width: katt2.width,
-				height: katt2.height,
 				data: katt2,
 				alt: 'Katt`s editor during drag and resize',
 			},
 			{
-				width: katt3.width,
-				height: katt3.height,
 				data: katt3,
 				alt: 'Katt`s editor during crop',
 			},

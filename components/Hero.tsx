@@ -5,17 +5,17 @@ const Hero = () => (
 				<span className='text-5xl md:text-7xl xl:text-9xl'>
 					Frontend
 				</span>
-				<span className='text-4xl md:text-6xl xl:text-8xl text-neutral-500'>
+				<span className='text-4xl md:text-6xl xl:text-8xl text-neutral-500 font-medium'>
 					Engineer
 				</span>
 			</h1>
 		</div>
 		<div className='xl:items-end'>
-			<div className='flex flex-col gap-y-1 text-center'>
-				<h3 className='uppercase font-light text-xl md:text-2xl xl:text-3xl'>
+			<div className='*:leading-tight flex flex-col gap-y-1 text-center justify-center tabular-nums p-5 rounded-3xl outline-1 outline-neutral-900'>
+				<h3 className='uppercase text-xl md:text-2xl xl:text-3xl'>
 					Open to Remote
 				</h3>
-				<small className='capitalize text-sm md:text-base xl:text-lg text-neutral-500'>
+				<small className='tracking-tight capitalize text-sm md:text-base xl:text-lg text-neutral-500 font-medium'>
 					(UTC + 7)
 				</small>
 			</div>

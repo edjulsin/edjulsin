@@ -92,8 +92,8 @@ const opengraph = async ({ params }: { params: Promise<{ slug: string }> }) =>
 							}}
 							src={`data:image/png;base64,${v}`}
 							alt={thumbnail.alt}
-							width={thumbnail.width}
-							height={thumbnail.height}
+							width={thumbnail.data.width}
+							height={thumbnail.data.height}
 						/>
 					</div>,
 					size

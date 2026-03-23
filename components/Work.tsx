@@ -26,7 +26,7 @@ const Work = () =>
 		>
 			{projects.map(v => (
 				<React.Fragment key={v.slug}>
-					<div className='h-px bg-neutral-800 transition-transform scale-x-0 origin-left ease-in-out duration-800 group-data-[intersected=true]:scale-x-100' />
+					<div className='h-px bg-neutral-900 transition-transform scale-x-0 origin-left ease-in-out duration-800 group-data-[intersected=true]:scale-x-100' />
 					<li key={v.slug}>
 						<Link
 							className='py-5 md:py-10 xl:py-15 text-neutral-500 hover:text-foreground cursor-pointer transition-colors block'
@@ -37,7 +37,7 @@ const Work = () =>
 					</li>
 				</React.Fragment>
 			))}
-			<div className='h-px bg-neutral-800 transition-transform scale-x-0 origin-left ease-in-out duration-800 group-data-[intersected=true]:scale-x-100' />
+			<div className='h-px bg-neutral-900 transition-transform scale-x-0 origin-left ease-in-out duration-800 group-data-[intersected=true]:scale-x-100' />
 		</ul>
 	</section>
 

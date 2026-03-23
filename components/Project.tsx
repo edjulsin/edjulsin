@@ -1,6 +1,7 @@
-import Image, { type StaticImageData } from 'next/image'
+import Image from 'next/image'
 import Link from 'next/link'
 import Intersector from './Intersector'
+import { Photo } from '@/type/photo'
 
 const Project = ({
 	title,
@@ -14,25 +15,20 @@ const Project = ({
 	stack: string[]
 	description: string
 	features: { title: string; description: string }[]
-	images: {
-		width: number
-		height: number
-		data: StaticImageData
-		alt: string
-	}[]
+	images: Photo[]
 	demo: string
 }) => (
 	<article className='grid xl:grid-cols-[.6fr_.4fr] gap-30 py-10'>
 		<section className='flex flex-col gap-y-15'>
 			<header className='flex flex-col justify-center gap-y-10'>
-				<h1 className='tracking-tight uppercase text-6xl/tight md:text-7xl/tight xl:text-8xl/tight'>
+				<h1 className='tracking-tight uppercase font-medium text-6xl md:text-7xl xl:text-8xl'>
 					{title}
 				</h1>
 				<ul className='uppercase flex flex-wrap gap-3 text-sm md:text-base xl:text-lg font-medium'>
 					{stack.map(v => (
 						<li
 							key={title + v}
-							className='uppercase px-2 py-1 rounded-full text-neutral-500 outline-1 outline-neutral-500'
+							className='uppercase px-2 py-1 rounded-full text-neutral-500 outline-1 outline-neutral-800'
 						>
 							{v}
 						</li>
@@ -51,9 +47,9 @@ const Project = ({
 						features.map(({ title, description }) =>
 							<li
 								key={title + description}
-								className='flex flex-col text-lg/relaxed md:text-xl/relaxed xl:text-2xl/relaxed'
+								className='flex flex-col leading-relaxed text-lg md:text-xl xl:text-2xl'
 							>
-								<span className='capitalize font-semibold'>
+								<span className='capitalize'>
 									{title}
 								</span>
 								<span className='text-neutral-500'>
@@ -69,7 +65,7 @@ const Project = ({
 					href={demo}
 					target='_blank'
 					rel='noopener noreferrer'
-					className='uppercase text-lg md:text-xl xl:text-2xl flex items-center justify-center gap-x-2 px-1 py-2 rounded-full outline-1 outline-neutral-500 hover:bg-foreground hover:text-background transition-colors'
+					className='uppercase text-lg md:text-xl xl:text-2xl flex items-center justify-center gap-x-2 px-1 py-2 rounded-full outline-1 outline-neutral-800 hover:bg-foreground hover:text-background transition-colors'
 				>
 					<span>Live demo</span>
 					<span>&#8599;</span>
@@ -90,8 +86,6 @@ const Project = ({
 								unoptimized={true}
 								src={v.data}
 								alt={v.alt}
-								width={v.width}
-								height={v.height}
 							/>
 						</li>
 					)

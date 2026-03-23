@@ -1,14 +1,20 @@
 'use client'
 
-const Footer = () =>
-	<footer className='text-neutral-500 text-center min-h-[30dvh] flex flex-col gap-y-5 md:gap-y-10 xl:gap-y-20 justify-center items-center'>
-		<span className='text-base md:text-xl xl:text-3xl'>
-			Remote (UTC + 7)
-		</span>
-		<span className='text-sm md:text-lg xl:text-2xl'>
-			{new Date().getFullYear()}
-		</span>
-	</footer>
+const Footer = () => {
+	const today = new Date()
+	return (
+		<footer className='text-neutral-500 font-medium text-center tabular-nums min-h-[30dvh] flex flex-col gap-y-5 md:gap-y-10 xl:gap-y-20 justify-center items-center'>
+			<span className='text-base md:text-xl xl:text-3xl'>
+				<span>Remote</span>
+				{' '}
+				<span className='tracking-tight'>(UTC + 7)</span>
+			</span>
+			<time dateTime={today.toISOString()} className='text-sm md:text-lg xl:text-2xl'>
+				{today.getFullYear()}
+			</time>
+		</footer>
+	)
+}
 
 
 export default Footer

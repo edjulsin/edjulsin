@@ -69,7 +69,7 @@ const Form = () => {
 		>
 			<Field id='name'>
 				<input
-					className='px-2 py-1 border-b-1 border-b-neutral-800 focus:outline-none focus:border-b-foreground'
+					className='px-2 py-1 border-b-1 border-b-neutral-800 focus:outline-none focus:border-b-neutral-500'
 					placeholder='Name'
 					id='name'
 					type='text'
@@ -82,7 +82,7 @@ const Form = () => {
 			</Field>
 			<Field id='email'>
 				<input
-					className='px-2 py-1 border-b-1 border-b-neutral-800 focus:outline-none focus:border-b-foreground'
+					className='px-2 py-1 border-b-1 border-b-neutral-800 focus:outline-none focus:border-b-neutral-500'
 					placeholder='Email'
 					id='email'
 					type='email'
@@ -93,7 +93,7 @@ const Form = () => {
 			</Field>
 			<Field id='message'>
 				<textarea
-					className='px-2 py-1 border-b-1 border-b-neutral-800 focus:outline-none focus:border-b-foreground min-h-35'
+					className='px-2 py-1 border-b-1 border-b-neutral-800 focus:outline-none focus:border-b-neutral-500 min-h-35'
 					placeholder='Message'
 					id='message'
 					name='message'
@@ -106,7 +106,7 @@ const Form = () => {
 			</Field>
 			<button
 				type='submit'
-				className='p-2 uppercase rounded-full outline-1 transition-colors outline-neutral-500 cursor-pointer hover:bg-foreground hover:text-background disabled:text-neutral-500 disabled:cursor-not-allowed'
+				className='p-2 uppercase rounded-full font-medium outline-1 transition-colors outline-neutral-800 cursor-pointer hover:bg-foreground hover:text-background disabled:text-neutral-500 disabled:cursor-not-allowed'
 				disabled={pending || state.sent}
 			>
 				Send
