@@ -1,6 +1,4 @@
-import Image from 'next/image'
 import Link from 'next/link'
-import Intersector from './Intersector'
 import { Photo } from '@/type/photo'
 import Screenshots from './Screenshots'
 
