@@ -35,8 +35,8 @@ const Intersector = ({
 					const position = !rootBounds
 						? 0
 						: Math.sign(
-								middle(boundingClientRect) - middle(rootBounds),
-							)
+							middle(boundingClientRect) - middle(rootBounds),
+						)
 
 					el.dataset.intersected = intersected
 					el.dataset.intersecting = intersecting

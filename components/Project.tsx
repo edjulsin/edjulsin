@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Intersector from './Intersector'
 import { Photo } from '@/type/photo'
+import Screenshots from './Screenshots'
 
 const Project = ({
 	title,
@@ -72,26 +73,7 @@ const Project = ({
 				</Link>
 			</section>
 		</section>
-		<section>
-			<Intersector selectors={['.project-image']} />
-			<ul className='flex flex-col gap-y-10 sticky top-0 right-0'>
-				{
-					images.map(v =>
-						<li
-							className='project-image data-[intersected=true]:unfold-xy'
-							key={v.data.src}
-						>
-							<Image
-								className='size-full'
-								unoptimized={true}
-								src={v.data}
-								alt={v.alt}
-							/>
-						</li>
-					)
-				}
-			</ul>
-		</section>
+		<Screenshots title={title} description={description} images={images} />
 	</article>
 )
 

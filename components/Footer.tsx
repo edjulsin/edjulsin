@@ -1,6 +1,5 @@
 'use client'
 
-
 const Footer = () => {
 	const today = new Date().getFullYear() + ''
 	return (
@@ -16,6 +15,5 @@ const Footer = () => {
 		</footer>
 	)
 }
-
 
 export default Footer
