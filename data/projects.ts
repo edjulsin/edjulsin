@@ -11,6 +11,7 @@ import kryptonScreenshot from '@/assets/krypton/screenshot.png'
 import finns1 from '@/assets/finns/1.png'
 import finns2 from '@/assets/finns/2.png'
 import finns3 from '@/assets/finns/3.png'
+import finns4 from '@/assets/finns/4.png'
 import finnsScreenshot from '@/assets/finns/screenshot.png'
 
 const projects: Project[] = [
@@ -65,6 +66,10 @@ const projects: Project[] = [
 			{
 				data: finns3,
 				alt: 'Finns checkout page',
+			},
+			{
+				data: finns4,
+				alt: 'Finns order review'
 			}
 		],
 		demo: 'https://finns-eight.vercel.app/book',
