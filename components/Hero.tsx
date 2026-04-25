@@ -11,8 +11,8 @@ const Hero = () => (
 			</h1>
 		</div>
 		<div className='xl:items-end'>
-			<div className='*:leading-tight flex flex-col gap-y-1 text-center justify-center tabular-nums p-5 rounded-3xl outline-1 outline-neutral-900'>
-				<h3 className='uppercase text-xl md:text-2xl xl:text-3xl'>
+			<div className='*:leading-tight flex flex-col gap-y-1 text-center justify-center tabular-nums p-5 rounded-3xl bg-neutral-900'>
+				<h3 className='capitalize text-lg md:text-xl xl:text-2xl'>
 					Open to Remote
 				</h3>
 				<small className='tracking-tight capitalize text-sm md:text-base xl:text-lg text-neutral-500 font-medium'>
