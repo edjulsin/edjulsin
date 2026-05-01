@@ -7,7 +7,7 @@ const Footer = () => {
 			<span className='text-base md:text-xl xl:text-3xl'>
 				<span>Remote</span>
 				{' '}
-				<span className='tracking-tight'>(UTC + 7)</span>
+				<span className='tracking-tight'>(Global)</span>
 			</span>
 			<time dateTime={today} className='text-sm md:text-lg xl:text-2xl'>
 				{today}

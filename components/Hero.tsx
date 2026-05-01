@@ -15,8 +15,8 @@ const Hero = () => (
 				<h3 className='capitalize text-lg md:text-xl xl:text-2xl'>
 					Open to Remote
 				</h3>
-				<small className='tracking-tight capitalize text-sm md:text-base xl:text-lg text-neutral-500 font-medium'>
-					(UTC + 7)
+				<small className='tracking-tight uppercase text-sm md:text-base xl:text-lg text-neutral-500 font-medium'>
+					(Global)
 				</small>
 			</div>
 		</div>
