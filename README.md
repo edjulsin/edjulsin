@@ -1,6 +1,6 @@
 # Edwin Julian
 
-I’m a **Front-End Engineer** with **6+ years of experience** building web applications using **React**, **Next.js**, **TypeScript**, and **D3.js**, with a strong focus on **functional programming** and **data visualization**.
+I’m a **Front-End Engineer** experienced in building web applications using **React**, **Next.js**, **TypeScript**, and **D3.js**, with a strong focus on **functional programming** and **data visualization**.
 
 This portfolio showcases projects that reflect my approach to **performance**, **accessibility**, and building **scalable, maintainable UI systems**.
 
