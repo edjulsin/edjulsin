@@ -11,13 +11,10 @@ const Hero = () => (
 			</h1>
 		</div>
 		<div className='xl:items-end'>
-			<div className='*:leading-tight flex flex-col gap-y-1 text-center justify-center tabular-nums p-5 rounded-3xl bg-neutral-900'>
-				<h3 className='capitalize text-lg md:text-xl xl:text-2xl'>
+			<div className='*:leading-tight flex flex-col gap-y-1 text-center justify-center tabular-nums px-5 py-3 rounded-3xl bg-neutral-900'>
+				<h3 className='text-lg md:text-xl xl:text-2xl'>
 					Open to Remote
 				</h3>
-				<small className='tracking-tight uppercase text-sm md:text-base xl:text-lg text-neutral-500 font-medium'>
-					(Global)
-				</small>
 			</div>
 		</div>
 		<div className='xl:items-start'>

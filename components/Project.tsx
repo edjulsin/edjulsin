@@ -38,7 +38,7 @@ const Project = ({
 				</p>
 			</header>
 			<section className='flex flex-col justify-center gap-y-5'>
-				<h3 className='capitalize text-2xl/relaxed md:text-3xl/relaxed xl:text-4xl/relaxed font-medium text-neutral-500 border-b-1 border-b-neutral-800'>
+				<h3 className='capitalize text-2xl/relaxed md:text-3xl/relaxed xl:text-4xl/relaxed font-medium text-neutral-500 border-b-1 border-b-neutral-900'>
 					Features
 				</h3>
 				<ul className='flex flex-col gap-y-10 justify-center'>

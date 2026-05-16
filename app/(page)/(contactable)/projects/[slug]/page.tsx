@@ -5,6 +5,8 @@ import Schema from '@/components/Schema'
 import projects from '@/data/projects'
 import projectMeta from '@/meta/project'
 import schema from '@/schemas/project'
+import Pagination from '@/components/Pagination'
+import { Separator } from 'radix-ui'
 
 const slugs = projects.map(v => v.slug)
 
@@ -36,6 +38,8 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) =>
 				<>
 					<Schema value={schema(project)} />
 					<Project {...project} />
+					<Separator.Root orientation='horizontal' className='h-px w-full bg-neutral-900' />
+					<Pagination index={index} />
 				</>
 			)
 		} else {
